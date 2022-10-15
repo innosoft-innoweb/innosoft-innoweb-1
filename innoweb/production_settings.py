@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_$s8&xy9@woe3wlr(pqj3r(n8q78o4j##h-f4e%@3=ms_d$!i7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'innosoftinnoweb.pythonanywhere.com',
+]
 
 
 # Application definition
@@ -75,8 +77,11 @@ WSGI_APPLICATION = 'innoweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE'  : 'django.db.backends.mysql',
+        'NAME'    : 'innosoftinnoweb$innowebdb',
+        'USER'    : 'innosoft',
+        'PASSWORD': 'Inn0$0ft_2k22',
+        'HOST'    : 'innosoftinnoweb.mysql.pythonanywhere-services.com',
     }
 }
 
