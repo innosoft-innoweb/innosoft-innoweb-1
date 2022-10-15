@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE'  : 'django.db.backends.mysql',
         'NAME'    : 'innosoftinnoweb$innowebdb',
-        'USER'    : 'innosoft',
+        'USER'    : 'innosoftinnoweb',
         'PASSWORD': 'Inn0$0ft_2k22',
         'HOST'    : 'innosoftinnoweb.mysql.pythonanywhere-services.com',
     }
