@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{% block title %} Perfil {% endblock %}</title>
+    </head>
+    <body>
+        <div id="content" name="content">
+            {% block content %}
+                <h1>Hola, soy el perfil</h1>
+                <h2>{{e.nombre}}</h2>
+                <h2>{{e.apellidos}}</h2>
+                <h2>{{e.email}}</h2>
+                <img src={{e.foto}}>
+            {% endblock %}
+    </body>
+</html>
