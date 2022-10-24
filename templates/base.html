@@ -13,27 +13,28 @@
     <link rel="apple-touch-icon" href="{% static '/images/innosoft_logo-nobg.png' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}">
 </head>
 
 <body>
-    <div id="Navbar">
+    <div class="navbar">
         {% block navbar %}
         <p>Navbar</p>
         {% endblock %}
     </div>
 
-    <div id="content">
+    <div class="content">
         {% block content %}{% endblock %}
     </div>
 
     <div class="footer">
         {% block footer %}
         <div class="footer-text">
-            <p>Web creada por los alumnos de EGC, ETSII US, 2022</p>
+            <p>Web creada por alumnos de EGC, ETSII US, 2022</p>
         </div>
         <div class="footer-social">
-            <a href="https://github.com/Dream-Team-US">
-                <img src="{% static '/images/gh_logo.png' %}" alt="Github" width="30" height="30">
+            <a href="https://github.com/Dream-Team-US" target="_blank">
+                <img src="{% static '/images/gh_logo.png' %}" alt="Github">
             </a>
         </div>
         {% endblock %}
