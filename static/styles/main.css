@@ -15,6 +15,7 @@
     --clr-magenta: hsl(295, 85%, 57%);
     --clr-red: hsl(0, 100%, 46%);
     --clr-green: hsl(137, 96%, 39%);
+    --clr-dark-blue-hover: hsl(226, 55%, 18%);
 
     /* Typography */
     --ff-primary: 'Iceberg', cursive;

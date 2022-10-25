@@ -1,0 +1,77 @@
+.navbar {
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-white);
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.navbar-leftsection {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.navbar-leftsection .navbar-logo {
+    height: 100%;
+    margin-inline: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+}
+
+.navbar-leftsection .navbar-logo img {
+    height: 75%;
+}
+
+.navbar-leftsection h1 {
+    margin-bottom: 0.2em;
+    color: inherit;
+    display: flex;
+    align-items: flex-end;
+    word-spacing: 6px;
+}
+
+.navbar-rightsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.navbar-rightsection .navbar-link {
+    color: inherit;
+    font-family: var(--ff-primary);
+    text-decoration: none;
+}
+
+.navbar-rightsection .navbar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.navbar-link-secondary {
+    margin: 0 2em;
+    height: 70%;
+}
+
+.navbar-link-secondary:hover,
+.navbar-link-secondary:focus {
+    color: var(--clr-yellow);
+}
+
+.navbar-link-primary {
+    border-left: 2px solid var(--clr-white);
+    padding: 0 1.5em;
+    height: 100%;
+}
+
+.navbar-link-primary:hover,
+.navbar-link-primary:focus {
+    background-color: var(--clr-yellow);
+}
