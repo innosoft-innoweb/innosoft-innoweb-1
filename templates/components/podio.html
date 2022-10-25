@@ -1,0 +1,27 @@
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/podio.css' %}">
+</head>
+<div class="podium">
+  <div class="podium-item">
+    <div class="podium-winner-wrapper">
+      <a><img class="podium-photo" src="{% static 'images/Jesus.jpg' %}"/></a>
+      <p class="podium-winner">Jesús Luque</p>
+    </div>
+    <div class="podium-position second">2</div>
+  </div>
+  <div class="podium-item">
+    <div class="podium-winner-wrapper">
+      <a><img class="podium-photo" src="{% static 'images/Belen.jpg' %}"/></a>
+      <p class="podium-winner">Ester García</p>
+    </div>
+    <div class="podium-position first">1</div>
+  </div>
+  <div class="podium-item">
+    <div class="podium-winner-wrapper">
+      <a><img class="podium-photo" src="{% static 'images/Juan.jpg' %}"/></a>
+      <p class="podium-winner">Juan Salas</p>
+    </div>
+    <div class="podium-position third">3</div>
+  </div>
+</div>
