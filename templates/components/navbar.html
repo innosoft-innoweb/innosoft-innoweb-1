@@ -1,0 +1,20 @@
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/navbar.css' %}">
+</head>
+
+
+<div class="navbar">
+    <div class="navbar-leftsection">
+        <a href="{% url 'home' %}" class="navbar-logo">
+            <img src="{% static 'images/innosoft_logo-nobg.png' %}" alt="logo" class="navbar-logo">
+        </a>
+        <h1>INNOSOFT Days Eventos</h1>
+    </div>
+    <div class="navbar-rightsection">
+        <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
+        <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
+        <a class="navbar-link navbar-link-primary" href="/">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+    </div>
+</div>
