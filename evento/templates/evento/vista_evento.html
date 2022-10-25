@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>{% block title %}Evento{% endblock %}</title>
+    </head>
+    <body>
+        <div id="content" name="content">
+            {% block content %}
+                <h1> Hola</h1>  
+                <h1>{{e.nombre}}</h1>
+                <h1>{{e.descripcion}}</h1>
+            {% endblock %}
+        </div>
+    </body>
+</html>
