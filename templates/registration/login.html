@@ -1,0 +1,39 @@
+<html>
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+
+{% block content %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Tu cuenta no tiene acceso a esta pagina. Inicia sesion con una cuenta con permisos.</p>
+    {% else %}
+    <p>Porfavos inicia sesion para ver esta página.</p>
+    {% endif %}
+{% endif %}
+
+<div class="container-login">
+    
+    <form method="POST" class="form-login">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="boton-logearte" type="submit" name="submit" value="Iniciar sesión"> 
+    </form>
+    {% if form.errors %}
+        <p id="error-form">Tu nombre o contraseña no son correctos. Por favor intentalo de nuevo..</p>
+    {% endif %}
+    <h4><a href="{% url 'password_reset' %}">¿Has olvidado la contraseña?</a></h4>
+
+</div>
+
+
+
+
+{% endblock %}
+</html>
