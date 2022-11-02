@@ -4,6 +4,6 @@ from .models import Participant
 # # Create your views here.
 
 
-def perfil(request, id):
+def profile(request, id):
      participant = Participant.objects.get(id=id)
-     return render(request, 'participant/perfil.html', {"e":participant}) #participant/perfil.html is the path of templates
+     return render(request, 'participant/profile.html', {"e":participant}) #participant/perfil.html is the path of templates
