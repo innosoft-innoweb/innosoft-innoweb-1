@@ -5,17 +5,18 @@
 </head>
 
 
-<div class="navbar navbar-mobile">
+<div class="navbar">
     <div class="navbar-topsection">
         <div class="navbar-leftsection">
             <a href="{% url 'home' %}" class="navbar-logo">
                 <img src="{% static 'images/innosoft_logo-nobg.png' %}" alt="logo" class="navbar-logo">
             </a>
-            <h1>INNOSOFT Days Eventos</h1>
+            <h1 class="navbar-title">INNOSOFT Days Eventos</h1>
         </div>
         <div class="navbar-rightsection">
-            <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
-            <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
+            {% comment %} ADD SAME LINKS IN BOTTOM SECTION FOR MOBILE SUPPORT {% endcomment %}
+            {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+            {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
             <a class="navbar-link navbar-link-primary" href="/">Acceder</a> {% comment %} TODO: change url {% endcomment %}
         </div>
         <div class="navbar-toggle">
@@ -25,8 +26,8 @@
         </div>
     </div>
     <div class="navbar-bottomsection navbar-bottomsection-closed">
-        <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
-        <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% comment %} TODO: change url {% endcomment %}
+        {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+        {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
         <a class="navbar-link navbar-link-primary" href="/">Acceder</a> {% comment %} TODO: change url {% endcomment %}
     </div>
 </div>

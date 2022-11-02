@@ -20,9 +20,10 @@
     display: flex;
     align-items: stretch;
     height: 100%;
+    white-space: nowrap;
 }
 
-.navbar-leftsection .navbar-logo {
+.navbar-logo {
     height: 100%;
     margin-inline: 1em;
     display: flex;
@@ -31,11 +32,11 @@
     aspect-ratio: 1;
 }
 
-.navbar-leftsection .navbar-logo img {
+.navbar-logo img {
     height: 75%;
 }
 
-.navbar-leftsection h1 {
+.navbar-title {
     margin-bottom: 0.2em;
     color: inherit;
     display: flex;
@@ -45,44 +46,44 @@
 
 /* Right Section */
 
-.navbar-desktop .navbar-rightsection {
+.navbar-rightsection {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-.navbar-desktop .navbar-link {
+.navbar-topsection .navbar-link {
     color: inherit;
     font-family: var(--ff-primary);
     text-decoration: none;
 }
 
-.navbar-desktop .navbar-link {
+.navbar-topsection .navbar-link {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.3em;
 }
 
-.navbar-desktop .navbar-link-secondary {
+.navbar-topsection .navbar-link-secondary {
     margin: 0 2em;
     height: 70%;
 }
 
-.navbar-desktop .navbar-link-secondary:hover,
-.navbar-desktop .navbar-link-secondary:focus {
+.navbar-topsection .navbar-link-secondary:hover,
+.navbar-topsection .navbar-link-secondary:focus {
     color: var(--clr-yellow);
 }
 
-.navbar-desktop .navbar-link-primary {
+.navbar-topsection .navbar-link-primary {
     border-left: 2px solid var(--clr-white);
     padding: 0 1.5em;
     height: 100%;
 }
 
-.navbar-desktop .navbar-link-primary:hover,
-.navbar-desktop .navbar-link-primary:focus {
+.navbar .navbar-link-primary:hover,
+.navbar .navbar-link-primary:focus {
     background-color: var(--clr-yellow);
 }
 
@@ -92,7 +93,7 @@
     border-left: 2px solid var(--clr-white);
     aspect-ratio: 1;
     height: 100%;
-    display: flex;
+    display: none;
 }
 
 .navbar-toggle a {
@@ -131,26 +132,33 @@
 }
 
 .navbar-bottomsection .navbar-link-primary {
-    border-top: 2px solid var(--clr-white);
-}
-
-/* Mobile */
-
-.navbar-mobile {
-    overflow: visible;
-}
-
-.navbar-desktop .navbar-toggle {
-    display: none !important;
-}
-
-.navbar-mobile .navbar-rightsection {
-    display: none !important;
+    border-top: 1px solid var(--clr-white);
 }
 
 .navbar-bottomsection-closed{
     transform: translateY(-100%);
 }
 
+/* Responsive */
 
+@media only screen and (max-width: 900px) {
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-rightsection {
+        display: none;
+    }
 
+    .navbar-topsection {
+        height: 3.5rem;
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-title {
+        display: none;
+    }
+}
