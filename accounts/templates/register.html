@@ -1,0 +1,21 @@
+<html>
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/register.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+{% block content %}
+<h1>Regístrate</h1>
+<div class="container-login">
+<form method="POST" action="{% url 'register' %}" class="form-login">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="boton-logearte" type="submit">Regístrate</button>
+</form>
+</div>
+{% endblock %}
+
+</html>
