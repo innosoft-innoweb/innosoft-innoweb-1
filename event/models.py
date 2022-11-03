@@ -7,7 +7,7 @@ class Event(models.Model):
     description = models.TextField()
     date = models.DateTimeField()
     place = models.CharField(max_length=100, help_text="Lugar del evento")
-    photo = models.URLField(max_length=10000, help_text="Url de la imagen del evento")
+    photo = models.URLField(max_length=10000, help_text="Url de la imagen del evento", blank=True)
     status = models.CharField(choices=[('Abierto','Abierto'),('En proceso','En proceso'), ('Finalizado', 'Finalizado')], default='Abierto', max_length=100)
     
 
