@@ -8,6 +8,10 @@ html{
 
 }
 
+.errorlist{
+    display:none;
+}
+
 .container-login{
     background-color: #fff;
     border-radius: 5px;
