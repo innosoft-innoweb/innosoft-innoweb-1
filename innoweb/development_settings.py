@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'participant.apps.ParticipantConfig',
-    'evento.apps.EventoConfig',
+    'event.apps.EventConfig',
+    'score.apps.ScoreConfig',
 ]
 
 MIDDLEWARE = [
