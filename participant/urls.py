@@ -4,6 +4,6 @@ from . import views
 
 
 urlpatterns = [
-   path('<int:id>', views.vistaEvento, name='evento'),
+    path('<int:id>', views.profile, name='profile'),
 
 ]
