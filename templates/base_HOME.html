@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+<head>
+    {% block title %}Home{% endblock %}
+
+    {% load static %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+</head>
 
 {% block content %}
-<p>home content</p> 
+
+<div class="home-layout">
+    {% include "components/podium.html" %}
+</div>
+
 {% endblock %}

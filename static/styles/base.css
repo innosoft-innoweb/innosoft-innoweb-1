@@ -5,17 +5,19 @@
     justify-content: stretch;
     align-items: stretch;
     margin: 0 auto;
+    padding-top: 4.5rem;
+    min-height: 85vh;
 }
 
 .footer {
     background-color: var(--clr-dark-blue);
     padding: 10px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-    row-gap: 1em    ;
+    row-gap: 1em;
     padding: 1.5em;
 }
 

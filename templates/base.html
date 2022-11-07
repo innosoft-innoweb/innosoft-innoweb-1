@@ -14,14 +14,12 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/base.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="navbar">
-        {% block navbar %}
-        <p>Navbar</p>
-        {% endblock %}
-    </div>
+    {% include "components/navbar.html" %}
 
     <div class="content">
         {% block content %}{% endblock %}
