@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/userDetails.css' %}">
+</head>
+
+<div class="user-details">
+    <div class="user-left-section">
+        <img class="user-img" src={% static 'images/Juan.jpg'%} alt="Profile pic">
+        <h3 class="user-name">Nicolás Shurman</h3>
+    </div>
+    <div class="user-right-section">
+        <div class="user-stats">
+            <h1 class="user-points-number">34</h1>
+            <h3 class="user-points-text">Puntos</h3>
+            <h2 class="user-events-number">2</h2>
+            <h3 class="user-events-text">Eventos</h3>
+        </div>
+        <div class="user-decoration">
+            <img src={% static 'illustrations/illustration_1.png'%} alt="">
+        </div>
+    </div>
+</div>

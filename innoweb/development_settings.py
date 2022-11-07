@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'participant.apps.ParticipantConfig',
     'event.apps.EventConfig',
+    'score.apps.ScoreConfig',
 ]
 
 MIDDLEWARE = [

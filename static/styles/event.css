@@ -1,0 +1,71 @@
+/*Events CSS*/
+
+/*Events list*/
+
+.title-events {
+    text-align: left;
+    margin-left: 5%;
+}
+
+.events-line {
+    color: var(--clr-dark-blue);
+    width: 75%;
+    text-align: left;
+    margin-left: 2%;
+}
+
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Event*/
+
+.title-event {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.event-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 200px;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border: 1px solid var(--clr-dark-blue);
+}
+
+.event-card {
+    box-shadow: 2px 2px 2px 2px var(--clr-dark-blue);
+    width: 90%;
+    height: 300px;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin: 10px;
+    padding: 0px;
+    max-width: 350px;
+    display: block;
+    background-color: var(--clr-light-blue);
+}
+
+.event-card:hover{
+    background-color: var(--clr-dark-blue);
+}
+
+.event-card:hover .title-event{
+    color: var(--clr-white);
+}
+
+.event-card:hover .event-image{
+    border: 1px solid var(--clr-light-blue);
+}
