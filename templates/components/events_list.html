@@ -1,0 +1,17 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1 class="title-events">Eventos</h1>
+    <hr class="events-line">
+
+    <div class="events-container">
+        {% for e in events %}
+        {% include "components/event.html" with event=e %}
+        {% endfor %}
+    </div>
+</body>
