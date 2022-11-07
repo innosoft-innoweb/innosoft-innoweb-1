@@ -1,0 +1,45 @@
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/navbar.css' %}">
+</head>
+
+
+<div class="navbar">
+    <div class="navbar-topsection">
+        <div class="navbar-leftsection">
+            <a href="{% url 'index' %}" class="navbar-logo">
+                <img src="{% static 'images/innosoft_logo-nobg.png' %}" alt="logo" class="navbar-logo">
+            </a>
+            <h1 class="navbar-title">INNOSOFT eventos</h1>
+        </div>
+        <div class="navbar-rightsection">
+            {% comment %} ADD SAME LINKS IN BOTTOM SECTION FOR MOBILE SUPPORT {% endcomment %}
+            {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+            {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+            <a class="navbar-link navbar-link-primary" href="/">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+        </div>
+        <div class="navbar-toggle">
+            <a href="#">
+                <i class="navbar-toggle-icon fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="navbar-bottomsection navbar-bottomsection-closed">
+        {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+        {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+        <a class="navbar-link navbar-link-primary" href="/">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    toggleClickHandler = (e) => {
+        const nav = document.querySelector('.navbar-bottomsection');
+        nav.classList.toggle('navbar-bottomsection-closed');
+        console.log("click")
+    }
+
+    window.onload = () => {
+        document.querySelector('.navbar-toggle').addEventListener('click', toggleClickHandler);
+    }
+</script>

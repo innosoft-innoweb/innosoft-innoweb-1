@@ -22,8 +22,9 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('evento/', include('evento.urls')),
+    path('evento/', include('event.urls')),
     path('', index, name='index'),
     path('', include('django.contrib.auth.urls')),
     path('participante/', include('participant.urls')),
+    path('puntuacion/', include('score.urls')),
 ]

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EventoConfig(AppConfig):
+class EventConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'evento'
+    name = 'event'
