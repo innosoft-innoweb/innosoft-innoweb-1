@@ -1,12 +1,11 @@
 .content {
-    background-color: var(--clr-white);
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     margin: 0 auto;
-    padding-top: 4.5rem;
     min-height: 85vh;
+    overflow: hidden;
 }
 
 .footer {

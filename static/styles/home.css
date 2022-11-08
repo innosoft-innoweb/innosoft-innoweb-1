@@ -2,7 +2,39 @@
 .home-layout {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
+}
+
+.podium-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    z-index: 5;
+}
+
+.event-list-wrapper {
+    margin-top: 4rem;
+    z-index: 5;
+}
+
+.decoration-right, .decoration-left {
+    position: absolute;
+    /* height: 80%; */
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.decoration-left {
+    left: 0;
+    top: 0;
+    transform: scale(0.95) translateX(-30%) translateY(-25%);
+}
+
+.decoration-right {
+    right:0;
+    top: 3%;
+    transform: scale(1) translateX(43%);
 }

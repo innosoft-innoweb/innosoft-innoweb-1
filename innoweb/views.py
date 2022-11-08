@@ -5,10 +5,7 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-    return render(request, 'base_HOME.html')
-
-def events_list(request):
-
+    
     event = {
                 "name": "Evento",
                 "description": "Esto es un evento",
@@ -21,6 +18,6 @@ def events_list(request):
     sample_events = [
         event, event, event, event, event, event, event, event, event
     ]
-
-    return render(request, 'components\events_list.html', {'events': sample_events})
+    
+    return render(request, 'base_HOME.html', {'events': sample_events})
     
