@@ -5,7 +5,7 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-    
+
     event = {
                 "name": "Evento",
                 "description": "Esto es un evento",

@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from innoweb.views import *
+from django.conf.urls import include
 from django.urls import include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('evento/', include('event.urls')),
+    path('index/', index, name='index'),
+    path('', include('django.contrib.auth.urls')),
     path('participante/', include('participant.urls')),
     path('puntuacion/', include('score.urls')),
 ]
