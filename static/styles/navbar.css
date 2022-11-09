@@ -43,6 +43,7 @@
     align-items: flex-end;
     word-spacing: 6px;
     user-select: none;
+    font-size: 2rem;
 }
 
 /* Right Section */

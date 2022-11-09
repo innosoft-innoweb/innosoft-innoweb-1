@@ -46,6 +46,10 @@ body {
   background-color: var(--clr-white);
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 /* MODERN HTML5 RESET https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Box sizing rules */

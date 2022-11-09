@@ -17,6 +17,8 @@
 
 .event-list-wrapper {
     margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 2rem;
     z-index: 5;
 }
 

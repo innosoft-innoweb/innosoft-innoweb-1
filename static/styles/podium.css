@@ -6,10 +6,11 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  column-gap: 1rem;
 }
 
 .podium-item {
-  width: 13rem;
+  width: clamp(6rem, 20%, 13rem);
 }
 
 .podium-position {
@@ -46,18 +47,34 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
 .podium .first {
-  min-height: 14rem;
-  margin-inline: 1rem;
+  height: 14rem;
   font-size: 6em;
 }
 
 .podium .second {
-  min-height: 9rem;
+  height: 9rem;
   font-size: 5em;
 }
 
 .podium .third {
-  min-height: 6rem;
+  height: 6rem;
   font-size: 4em;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .podium .first {
+    height: 10rem;
+  }
+
+  .podium .second {
+    height: 7rem;
+  }
+  
+  .podium .third {
+    height: 5rem;
+  }
+
 }
