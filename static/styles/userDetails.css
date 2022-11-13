@@ -1,0 +1,123 @@
+
+/* User details */
+
+.user-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-inline: 9rem;
+    padding-block: 10rem;
+}
+
+/* Left section */
+
+.user-left-section {
+    /* padding-inline: 4em;
+    padding-block: 6em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    flex-grow: 1;
+    min-width: clamp(30%, 20rem, 50rem);
+}
+
+.user-img {
+    width: 14em;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 0.2em var(--clr-dark-blue) solid;
+}
+
+.user-name {
+    margin: 1em;
+    font-size: 1.5rem;
+}
+
+/* Right section */
+
+.user-right-section {
+    /* margin-inline: 4em;
+    margin-block: 6em; */
+    display: flex;
+    position: relative;
+    flex-grow: 3.5;
+}
+
+.user-stats {
+    width: 22rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: stretch;
+    align-content: center;
+}
+
+.user-stats > * {
+    height: 30%;
+    width: 50%;
+}
+
+.user-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-points-number {
+    color: var(--clr-yellow);
+    height: 10rem;
+    font-size: 9em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-points-text {
+    height: 10rem;
+    font-size: 3em;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 5px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-events-number {
+    color: var(--clr-red);
+    height: 7rem;
+    font-size: 7em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.user-events-text {
+    height: 7rem;
+    font-size: 3em;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 5px;
+}
+
+/* decoration */
+
+.user-decoration {
+    width: auto;
+}
+
+.user-decoration img{
+    position: absolute;
+    /* margin-left: 5rem; */
+    height: 80%;
+    transform: scale(1.5) translateX(5rem);
+    opacity: 0.2;
+}
