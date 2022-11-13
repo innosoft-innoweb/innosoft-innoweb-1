@@ -1,9 +1,10 @@
 from django.shortcuts import render
 
+# view for testing components
 def index(request):
     return render(request, 'index.html')
-  
-def events_list(request):
+
+def home(request):
 
     event = {
                 "name": "Evento",
@@ -17,6 +18,6 @@ def events_list(request):
     sample_events = [
         event, event, event, event, event, event, event, event, event
     ]
-
-    return render(request, 'components\events_list.html', {'events': sample_events})
+    
+    return render(request, 'base_HOME.html', {'events': sample_events})
     
