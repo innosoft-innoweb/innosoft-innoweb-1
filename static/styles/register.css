@@ -1,11 +1,19 @@
-html{
+.register-layout{
     height: 100%;
     background-image: url(https://theuniqueacademy.co.in/assets/images/test.png);
     background-repeat: no-repeat;
     
     background-attachment: fixed;
     background-position: left;
+    background-size: cover;
 
+}
+
+.register-layout {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin-top: 3rem;
 }
 
 .container-register{
@@ -13,14 +21,17 @@ html{
     border-radius: 5px;
     box-shadow: 0 0 30px 0 var(--clr-light-blue);
     padding: 1rem;
-    margin: 0 auto;
-    margin-top: 10rem;
+    margin: 4rem;
     max-width: 30rem;
     width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%)
+}
+
+.titulo{
+    padding: 1rem;
+    margin-right: auto;
+    max-width: 30rem;
+    width: 50%
+
 }
 #error-form{
     text-align: center;
@@ -94,17 +105,17 @@ label{
 }
 
 @media (max-width: 900px){
-    .container-register{
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 30px 0 var(--clr-light-blue);
-        padding: 20px;
+    .titulo{
+        display: flex;
+        justify-content: center;
         margin: 0 auto;
-        margin-top: 50px;
-        width: 90%;
-        position: fixed;
-        top: 45%;
-        left: 50%;
+    }
+    .register-layout{
+        flex-direction: column;
+    }
+    .container-register{
+        width: 70%;
+
        
     }
 
