@@ -1,76 +1,78 @@
-<html>
-    <head>
-        <title>{% block title %}Evento{% endblock %}</title>
+{% extends "base.html" %}
 
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        {% include "components/navbar.html"%}
+{% block head %}
+    {% block title %}{% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
+{% endblock %}
+
         
-        
-        <div id="content" name="content">
-            {% block content %}
-            <div class="event-details">
-                <div class="event-header">
-                    <div class="event-card">
-                        <h2 class="title-event">
-                            {{ e.name}}
-                        </h2>
-                        <div class="image-card">
-                            <img class="event-image" src= {{ e.photo }} />    
-                        </div>
-                    </div> 
 
-                    {% include "components/podium.html"%}
-                    
-
-                </div>
-
-                <div class="event-description">
-                    <p> {{ e.description }} </p>
-                    <p>El evento tendrá lugar en {{ e.place }} el {{ e.date }} </p>
-                </div>
-
-                <div class="participants">
-                    <div class="participants-header">
-                        <h1>Participantes</h1>
-                        <div class="header-right">
-                            <span class="status" id="status">{{ e.status }}</span>
-                            <span class="sign-up">Registrarse</span>
-                        </div>
-                        
-                    </div>
-                    <hr class="line-break">
-                    
-                    <div class="participants-list">
-                        <table class="tftable">
-                            <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>Apellidos</th>
-                                <th>Puntuación</th>
-                                <th>Diploma</th>
-                            </tr>
-                            {% for s in scores %}
-                            <tr>
-                                <td>{{ forloop.counter }}</td>
-                                <td class="participant-name">{{ s.participant.name }}</td>
-                                <td class="participant-surname">{{ s.participant.surname }}</td>
-                                <td class="participant-score">{{ s.value }}</td>
-                                <td class="participant-certificate"><a href="#" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
-
+{% block content %}
+<div class="event-details">
+    <div class="event-header">
+        <div class="event-card">
+            <h2 class="title-event">
+                {{ e.name}}
+            </h2>
+            <div class="image-card">
+                <img class="event-image" src= {{ e.photo }} />    
             </div>
-            {% endblock %}
+        </div> 
+
+        <div class="podium-wrapper-event">
+            {% include "components/podium.html"%}
         </div>
 
-        <script src="{% static 'scripts/utils.js' %}"></script>
-    </body>
-</html>
+        
+        
+        
+
+    </div>
+
+    <div class="event-description">
+        <p> {{ e.description }} </p>
+        <p>El evento tendrá lugar en {{ e.place }} el {{ e.date }} </p>
+    </div>
+
+    <div class="participants">
+        <div class="participants-header">
+            <h1>Participantes</h1>
+            <div class="header-right">
+                <span class="status" id="status">{{ e.status }}</span>
+                <span class="sign-up">Registrarse</span>
+            </div>
+            
+        </div>
+        <hr class="line-break">
+        
+        <div class="participants-list">
+            <table class="tftable">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Puntuación</th>
+                    <th>Diploma</th>
+                </tr>
+                {% for s in scores %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td class="participant-name">{{ s.participant.name }}</td>
+                    <td class="participant-surname">{{ s.participant.surname }}</td>
+                    <td class="participant-score">{{ s.value }}</td>
+                    <td class="participant-certificate"><a href="#" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="{% static 'scripts/utils.js' %}"></script>
+    
+    {% endblock %}
+
+
+

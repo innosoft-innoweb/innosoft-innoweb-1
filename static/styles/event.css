@@ -61,6 +61,7 @@
     margin: 10px;
     padding: 0px;
     max-width: 350px;
+    min-width: 200px;
     display: block;
     background-color: var(--clr-light-blue);
     cursor: pointer;
@@ -83,13 +84,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 100px;
+    padding: 100px 50px;
 }
 
 .event-header { 
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    justify-content: space-around;
+    padding: 0 1rem ;
+    gap: 4rem 4rem;
+    flex-wrap: wrap;
+}
+
+.podium-wrapper-event {
+    width: 400px;
 }
 
 .event-description {
@@ -104,6 +112,7 @@
 /* Participants */
 .participants h1 {
     text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .participants-header {
@@ -112,14 +121,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    flex-wrap: wrap-reverse;
+    row-gap: 1rem;
 }
 
 .header-right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 250px;
+    min-width: 200px;
 }
+
 
 .status {
     border: 2px solid;
@@ -177,4 +189,22 @@ td{
 .download-certificate {
     text-decoration: none;
     padding-right: 5px;
+}
+
+@media(max-width: 720px) {
+    .participants-list {
+        padding: 0;
+        overflow-x: auto;
+    }
+    
+    .event-details {
+        padding: 100px 20px;
+    }
+
+}
+
+@media(max-width: 430px) {
+    .event-details {
+        padding: 0;
+    }
 }
