@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 
+<body>
 {% block content %}
 <h1>Regístrate</h1>
-<div class="container-login">
-<form method="POST" action="{% url 'register' %}" class="form-login">
+<div class="container-register">
+<form method="POST" action="{% url 'register' %}" class="form-register">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="boton-logearte" type="submit">Regístrate</button>
+    <button class="boton-registrarte" type="submit">Regístrate</button>
 </form>
 </div>
 {% endblock %}
+</body>
 
 </html>
