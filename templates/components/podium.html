@@ -5,22 +5,22 @@
 <div class="podium">
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{% static 'images/Jesus.jpg' %}"/></a>
-      <p class="podium-winner">Jesús Luque</p>
+      <a><img class="podium-photo" src="{{ second.photo }}"/></a>
+      <p class="podium-winner">{{ second.name }}</p>
     </div>
     <div class="podium-position second">2</div>
   </div>
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{% static 'images/Belen.jpg' %}"/></a>
-      <p class="podium-winner">Ester García</p>
+      <a><img class="podium-photo" src="{{ first.photo }}"/></a>
+      <p class="podium-winner">{{ first.name }} {{ first.surname }} </p>
     </div>
     <div class="podium-position first">1</div>
   </div>
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{% static 'images/Juan.jpg' %}"/></a>
-      <p class="podium-winner">Juan Salas</p>
+      <a><img class="podium-photo" src="{{ third.photo }}"/></a>
+      <p class="podium-winner">{{ third.name }}</p>
     </div>
     <div class="podium-position third">3</div>
   </div>
