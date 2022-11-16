@@ -87,7 +87,7 @@ label{
     font-family: var(--ff-primary);
 }
 
-.boton-logearte{
+.boton-registrarte{
     background-color: var(--clr-light-blue);
     color: rgb(254, 6, 6);
     border: none;
