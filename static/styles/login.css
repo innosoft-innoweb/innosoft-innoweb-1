@@ -1,10 +1,10 @@
-html{
+.content{
     height: 100%;
     background-image: url(https://theuniqueacademy.co.in/assets/images/test.png);
     background-repeat: no-repeat;
-    
     background-attachment: fixed;
     background-position: left;
+    background-size: cover;
 
 }
 
