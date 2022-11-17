@@ -1,28 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
-class Participant(models.Model):
-    name = models.CharField(max_length=50, help_text="Introducce tu nombre")
-    surname = models.CharField(max_length=50, help_text="Introduce tus apellidos")
-    email = models.EmailField(max_length=50, help_text="Introduce tu correo")
-    photo = models.URLField(max_length=200, help_text="Introduce la url de tu foto", blank=True, default="http://cdn.onlinewebfonts.com/svg/img_569204.png")
 
-    def __str__(self):
-        return self.email
-    
-    #Metadata
-    class Meta:
-        ordering = ['name']
-    
-    #Métodos
-    def get_name(self):
-        return self.name
+class Participant(AbstractUser):
+    id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
+    photo = models.URLField(max_length=200, help_text="Introduce la url de tu foto", blank=True, default="http://cdn.onlinewebfonts.com/svg/img_569204.png)
 
-    def get_surname(self):
-        return self.surname
-
-    def get_email(self):
-        return self.email
-
-    
     
