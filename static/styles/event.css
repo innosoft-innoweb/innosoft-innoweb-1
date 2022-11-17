@@ -205,6 +205,6 @@ td{
 
 @media(max-width: 430px) {
     .event-details {
-        padding: 0;
+        padding: 100px 0;
     }
 }
