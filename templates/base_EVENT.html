@@ -17,7 +17,7 @@
                 {{ e.name}}
             </h2>
             <div class="image-card">
-                <img class="event-image" src= {{ e.photo }} />    
+                <img class="event-image" src= {{ e.photo }} alt="Event image"/>    
             </div>
         </div> 
 
@@ -59,8 +59,8 @@
                 {% for s in scores %}
                 <tr>
                     <td>{{ forloop.counter }}</td>
-                    <td class="participant-name">{{ s.participant.name }}</td>
-                    <td class="participant-surname">{{ s.participant.surname }}</td>
+                    <td class="participant-name">{{ s.participant.get_name }}</td>
+                    <td class="participant-surname">{{ s.participant.get_last_name }}</td>
                     <td class="participant-score">{{ s.value }}</td>
                     <td class="participant-certificate"><a href="#" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
                 {% endfor %}
