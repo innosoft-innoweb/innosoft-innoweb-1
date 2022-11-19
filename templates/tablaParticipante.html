@@ -1,0 +1,53 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/tablaParticipante.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <head>
+
+
+<table class="tftable">
+    <tbody class = "body">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Puntos</th>
+            <th>Diploma</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Tomas</td>
+            <td>Camero Borrego</td>
+            <td>567</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Juan</td>
+            <td>Salado Jurado</td>
+            <td>0</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ezequiel</td>
+            <td>Gonzalez Macho</td>
+            <td>496</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ismael</td>
+            <td>Perez Ortiz</td>
+            <td>147</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Miguel</td>
+            <td>Romero Arjona</td>
+            <td>853</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+    </tbody>
+</table>
