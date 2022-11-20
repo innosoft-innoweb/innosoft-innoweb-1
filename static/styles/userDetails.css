@@ -5,12 +5,23 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     column-gap: 5rem;
     justify-content: space-between;
     overflow: hidden;
     padding-inline: 9rem;
-    padding-block: 10rem;
+    padding-block: 5rem;
+}
+
+@media screen and (max-width: 990px) {
+    .user-details {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .user-details {
+        padding-inline: 0rem;
+    }
 }
 
 /* Left section */
@@ -24,6 +35,12 @@
     justify-content: end;
     flex-grow: 1;
     min-width: clamp(30%, 20rem, 50rem);
+}
+
+@media screen and (max-width: 510px) {
+    .user-left-section {
+        flex-grow: 0.55;
+    }
 }
 
 .user-img {

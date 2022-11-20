@@ -1,21 +1,49 @@
 .tftable{
     border-spacing:0;
-    
+    width: 95%;
+    margin-left: 30px;
 }
 
-tr{
+@media(max-width: 650px) {
+    .tftable {
+        width: 75%;
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+@media(max-width: 470px) {
+    .tftable {
+        width: 50%;
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+@media(max-width: 320px) {
+    .tftable {
+        width: 40%;
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+.tftable tr{
     font-family: var(--ff-primary);
     color: var(--clr-dark-blue);
 } 
-th{
+
+.tftable th{
     padding-bottom: 1%;
     text-align: left;
     border-bottom: 2px solid;
     
 }
   
-td{
+.tftable td{
     padding-right: 6em;
     padding-top:1em;
 }
-  

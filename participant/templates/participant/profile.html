@@ -1,14 +1,23 @@
-<html>
-    <head>
-        <title>{% block title %} Perfil {% endblock %}</title>
-    </head>
-    <body>
-        <div id="content" name="content">
-            {% block content %}
-                <h1>Hola, soy el perfil</h1>
-                <h2>{{e.username}}</h2>
-                <h2>{{e.email}}</h2>
-                <img src={{e.photo}}>
-            {% endblock %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block head %}
+    {% block title %}Perfil{% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home-layout">
+
+    
+    <div class="podium-wrapper">
+        {% include "components/userDetails.html" %}
+    </div>
+    <div class="event-list-wrapper">
+        {% include "components/user_events.html" with events=u_events %}
+    </div>
+</div>
+
+{% endblock %}
