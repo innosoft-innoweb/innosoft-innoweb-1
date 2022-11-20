@@ -1,0 +1,21 @@
+.tftable{
+    border-spacing:0;
+    
+}
+
+tr{
+    font-family: var(--ff-primary);
+    color: var(--clr-dark-blue);
+} 
+th{
+    padding-bottom: 1%;
+    text-align: left;
+    border-bottom: 2px solid;
+    
+}
+  
+td{
+    padding-right: 6em;
+    padding-top:1em;
+}
+  

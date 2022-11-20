@@ -1,0 +1,25 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <head>
+
+
+<table class="tftable">
+    <tbody class = "body">
+        <tr>
+            <th>{{ column1 }}</th>
+            <th>{{ column2 }}</th>
+            <th>Puntos</th>
+            <th>Diploma</th>
+        </tr>
+    {% for e in elements %}
+        <tr>
+            <td>{{e.0}}</td>
+            <td>{{e.1}}</td>
+            <td>{{e.2}}</td>
+            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
