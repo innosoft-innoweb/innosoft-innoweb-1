@@ -1,906 +1,5 @@
 [
 {
-    "model": "admin.logentry",
-    "pk": 1,
-    "fields": {
-        "action_time": "2022-11-19T12:33:09.494Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "1",
-        "object_repr": "AA",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-        "action_time": "2022-11-19T21:56:12.879Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "1",
-        "object_repr": "AA",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-        "action_time": "2022-11-19T21:56:30.846Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "2",
-        "object_repr": "AA",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-        "action_time": "2022-11-19T21:56:37.251Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "3",
-        "object_repr": "AAa",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-        "action_time": "2022-11-19T21:56:50.318Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "4",
-        "object_repr": "baa",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-        "action_time": "2022-11-19T21:59:55.681Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "2",
-        "object_repr": "Gymkhana Innosoft",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-        "action_time": "2022-11-19T22:09:43.250Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "3",
-        "object_repr": "Torneo ajedrez",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-        "action_time": "2022-11-19T22:14:07.005Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "4",
-        "object_repr": "Torneo Brawhalla",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-        "action_time": "2022-11-19T22:17:10.286Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "5",
-        "object_repr": "Escape room",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 10,
-    "fields": {
-        "action_time": "2022-11-19T22:20:49.429Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "6",
-        "object_repr": "Torneo de bolos",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 11,
-    "fields": {
-        "action_time": "2022-11-19T22:21:09.107Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "5",
-        "object_repr": "Escape Room",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-        "action_time": "2022-11-19T22:21:13.902Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "6",
-        "object_repr": "Torneo de Bolos",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-        "action_time": "2022-11-19T22:21:20.671Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "3",
-        "object_repr": "Torneo Ajedrez",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-        "action_time": "2022-11-19T22:26:37.991Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "7",
-        "object_repr": "Torneo Futbolín",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2022-11-19T22:30:51.822Z",
-        "user": 1,
-        "content_type": 7,
-        "object_id": "8",
-        "object_repr": "Torneo de Cartas",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2022-11-19T22:33:51.580Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "5",
-        "object_repr": "ezegonmac",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2022-11-19T22:35:08.528Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "6",
-        "object_repr": "tomcambor",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2022-11-19T22:36:17.166Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "7",
-        "object_repr": "juasaljur",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2022-11-19T22:37:22.362Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "8",
-        "object_repr": "ismperort",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2022-11-19T22:38:11.667Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "9",
-        "object_repr": "migromarj",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-        "action_time": "2022-11-19T22:38:52.484Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "1",
-        "object_repr": "Score object (1)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-        "action_time": "2022-11-19T22:39:07.457Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Score object (2)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2022-11-19T22:39:24.363Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "3",
-        "object_repr": "Score object (3)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2022-11-19T22:39:48.801Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "4",
-        "object_repr": "Score object (4)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-        "action_time": "2022-11-19T22:40:03.837Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "5",
-        "object_repr": "Score object (5)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-        "action_time": "2022-11-19T22:40:16.337Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "6",
-        "object_repr": "Score object (6)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-        "action_time": "2022-11-19T22:40:31.467Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "7",
-        "object_repr": "Score object (7)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-        "action_time": "2022-11-19T22:41:05.448Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "8",
-        "object_repr": "Score object (8)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-        "action_time": "2022-11-19T22:41:22.716Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "9",
-        "object_repr": "Score object (9)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-        "action_time": "2022-11-19T22:41:33.761Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "10",
-        "object_repr": "Score object (10)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-        "action_time": "2022-11-19T22:41:44.952Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "11",
-        "object_repr": "Score object (11)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-        "action_time": "2022-11-19T22:41:59.396Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "12",
-        "object_repr": "Score object (12)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-        "action_time": "2022-11-19T22:42:09.198Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "13",
-        "object_repr": "Score object (13)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-        "action_time": "2022-11-19T22:42:23.153Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "14",
-        "object_repr": "Score object (14)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-        "action_time": "2022-11-19T22:43:19.227Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "15",
-        "object_repr": "Score object (15)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-        "action_time": "2022-11-19T22:43:31.606Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "16",
-        "object_repr": "Score object (16)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-        "action_time": "2022-11-19T22:43:43.897Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "17",
-        "object_repr": "Score object (17)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-        "action_time": "2022-11-19T22:43:55.612Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "18",
-        "object_repr": "Score object (18)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-        "action_time": "2022-11-19T22:44:08.679Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "19",
-        "object_repr": "Score object (19)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-        "action_time": "2022-11-19T22:44:24.641Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "20",
-        "object_repr": "Score object (20)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-        "action_time": "2022-11-19T22:44:43.625Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "21",
-        "object_repr": "Score object (21)",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": 1,
-        "codename": "add_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": 1,
-        "codename": "change_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": 1,
-        "codename": "delete_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": 1,
-        "codename": "view_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-        "name": "Can add permission",
-        "content_type": 2,
-        "codename": "add_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-        "name": "Can change permission",
-        "content_type": 2,
-        "codename": "change_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": 2,
-        "codename": "delete_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-        "name": "Can view permission",
-        "content_type": 2,
-        "codename": "view_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-        "name": "Can add group",
-        "content_type": 3,
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-        "name": "Can change group",
-        "content_type": 3,
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-        "name": "Can delete group",
-        "content_type": 3,
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-        "name": "Can view group",
-        "content_type": 3,
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-        "name": "Can add content type",
-        "content_type": 4,
-        "codename": "add_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-        "name": "Can change content type",
-        "content_type": 4,
-        "codename": "change_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": 4,
-        "codename": "delete_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-        "name": "Can view content type",
-        "content_type": 4,
-        "codename": "view_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-        "name": "Can add session",
-        "content_type": 5,
-        "codename": "add_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-        "name": "Can change session",
-        "content_type": 5,
-        "codename": "change_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-        "name": "Can delete session",
-        "content_type": 5,
-        "codename": "delete_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-        "name": "Can view session",
-        "content_type": 5,
-        "codename": "view_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-        "name": "Can add user",
-        "content_type": 6,
-        "codename": "add_participant"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-        "name": "Can change user",
-        "content_type": 6,
-        "codename": "change_participant"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-        "name": "Can delete user",
-        "content_type": 6,
-        "codename": "delete_participant"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-        "name": "Can view user",
-        "content_type": 6,
-        "codename": "view_participant"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-        "name": "Can add event",
-        "content_type": 7,
-        "codename": "add_event"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-        "name": "Can change event",
-        "content_type": 7,
-        "codename": "change_event"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-        "name": "Can delete event",
-        "content_type": 7,
-        "codename": "delete_event"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-        "name": "Can view event",
-        "content_type": 7,
-        "codename": "view_event"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-        "name": "Can add score",
-        "content_type": 8,
-        "codename": "add_score"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-        "name": "Can change score",
-        "content_type": 8,
-        "codename": "change_score"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-        "name": "Can delete score",
-        "content_type": 8,
-        "codename": "delete_score"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-        "name": "Can view score",
-        "content_type": 8,
-        "codename": "view_score"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-        "app_label": "admin",
-        "model": "logentry"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-        "app_label": "auth",
-        "model": "permission"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-        "app_label": "auth",
-        "model": "group"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-        "app_label": "contenttypes",
-        "model": "contenttype"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-        "app_label": "sessions",
-        "model": "session"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-        "app_label": "participant",
-        "model": "participant"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-        "app_label": "event",
-        "model": "event"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-        "app_label": "score",
-        "model": "score"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "4kcgt39dbo9jfaddlcmzfw5ef9xhpy65",
-    "fields": {
-        "session_data": ".eJxVjMsOwiAQRf-FtSG0MDxcuvcbyDAMUjUlKe3K-O_apAvd3nPOfYmI21rj1nmJUxZnMYjT75aQHjzvIN9xvjVJbV6XKcldkQft8toyPy-H-3dQsddvrR3QOLCHMZAxGRCoeHTesPIUEMpYsBRbNCp2lnQKbJL3SgdggmzF-wPo5jhO:1owN1T:rQIbbxVoj9Levt5UFCXwe86h0mHYWbGZL3v_YkD8bxc",
-        "expire_date": "2022-12-03T12:32:39.602Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "dmzh5lyva7kz3hg3vhimo9dzfglfiodj",
-    "fields": {
-        "session_data": ".eJxVjMsOwiAQRf-FtSG0MDxcuvcbyDAMUjUlKe3K-O_apAvd3nPOfYmI21rj1nmJUxZnMYjT75aQHjzvIN9xvjVJbV6XKcldkQft8toyPy-H-3dQsddvrR3QOLCHMZAxGRCoeHTesPIUEMpYsBRbNCp2lnQKbJL3SgdggmzF-wPo5jhO:1owVoZ:sF3NXRlrJ-2fztbgBxGyfWR9IwY8RzfmoH8ymV75uvw",
-        "expire_date": "2022-12-03T21:55:55.981Z"
-    }
-},
-{
     "model": "participant.participant",
     "pk": 1,
     "fields": {
@@ -921,7 +20,7 @@
 },
 {
     "model": "participant.participant",
-    "pk": 5,
+    "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$390000$aEubTH9Rju2P9WEwO4b6QH$CpqJUogWS6aw6vAMtdytcjHoL7KXcPxFYXVIiztbFc4=",
         "last_login": null,
@@ -940,7 +39,7 @@
 },
 {
     "model": "participant.participant",
-    "pk": 6,
+    "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$390000$RroVlkK8wWyZHj6GZPBLVz$NAKu/K6jIcLiNt6tzF/otGm5VNsC6X76x4prhs/1sN0=",
         "last_login": null,
@@ -959,7 +58,7 @@
 },
 {
     "model": "participant.participant",
-    "pk": 7,
+    "pk": 4,
     "fields": {
         "password": "pbkdf2_sha256$390000$vvyY1QXFHwfpiM7Ys9KUiP$rxrzj1eD5QZDNKONCe5JQ82CYvITjrOwFdAxQbXfD9o=",
         "last_login": null,
@@ -978,7 +77,7 @@
 },
 {
     "model": "participant.participant",
-    "pk": 8,
+    "pk": 5,
     "fields": {
         "password": "pbkdf2_sha256$390000$rGr54Hf7zO3AxYInZszANa$zR2zfZ6cB21UK1H+O5fa1XzLG1NWPOz8oPdj+BqOb3I=",
         "last_login": null,
@@ -997,7 +96,7 @@
 },
 {
     "model": "participant.participant",
-    "pk": 9,
+    "pk": 6,
     "fields": {
         "password": "pbkdf2_sha256$390000$R1Q7ReBjinWTvbOVOL6rEs$iasuurRJWHG6We7oZ7s6V5JrRiU5N1JD2NoPrsQ5CBk=",
         "last_login": null,
@@ -1016,9 +115,93 @@
 },
 {
     "model": "event.event",
+    "pk": 1,
+    "fields": {
+        "name": "Gymkhana Innosoft 2022",
+        "description": "Juego de competición en equipo en el que los participantes deben superar una serie de pruebas que de ingenio, habilidad, físicas y deportivas a lo largo de un recorrido.",
+        "date": "2022-11-10T15:30:00Z",
+        "place": "A3.11",
+        "photo": "https://1.bp.blogspot.com/-xY53vZ1BWag/XUAq3Tea5fI/AAAAAAAA-KE/Uh3XjGYKeQM40ABmul_nio7xinijoMvVgCLcBGAs/s1600/WhatsApp%2BImage%2B2019-07-30%2Bat%2B12.35.26%25281%2529.jpeg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
     "pk": 2,
     "fields": {
-        "name": "Gymkhana Innosoft",
+        "name": "Torneo Ajedrez 2022",
+        "description": "Serie de partidas de ajedrez, jugadas competitivamente para determinar un ganador individual.",
+        "date": "2022-11-10T12:30:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://i0.wp.com/thezugzwangblog.com/wp-content/uploads/2021/05/primer-torneo-de-ajedrez.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 3,
+    "fields": {
+        "name": "Torneo Brawhalla 2022",
+        "description": "Juego de plataforma de luchas donde los participantes se enfrentan para demostrar quién es o será el más grande de todos.",
+        "date": "2022-11-09T12:30:00Z",
+        "place": "I2.35",
+        "photo": "https://www.powergamingnetwork.com/wp-content/uploads/2021/02/maxresdefault-2021-02-02T163439.503-1024x576.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 4,
+    "fields": {
+        "name": "Escape Room 2022",
+        "description": "Juego de aventura físico y mental, donde un grupo de jugadores estarán encerrados en una habitación, donde deberán solucionar una serie de enigmas ...",
+        "date": "2022-11-10T17:30:00Z",
+        "place": "F0.84",
+        "photo": "https://www.resistanceroom.com/wp-content/uploads/escape-room-1.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 5,
+    "fields": {
+        "name": "Torneo de Bolos 2022",
+        "description": "Cada jugador deberá derribar el mayor número posible de bolos lanzando una bola.",
+        "date": "2022-11-10T10:00:00Z",
+        "place": "ETSII",
+        "photo": "https://curiosfera-historia.com/wp-content/uploads/Historia-de-los-bolos-1.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 6,
+    "fields": {
+        "name": "Torneo Futbolín 2022",
+        "description": "Torneo individual en el que los participantes tendrán que ganar una serie de partidos para que el que consiga más victorias se convierta en el ganador.",
+        "date": "2022-11-09T18:00:00Z",
+        "place": "Anunnakis Café-Bar",
+        "photo": "https://cflvdg.avoz.es/sc/hxvDMEBIAQAOCtrgmLOmyK18Tpc=/480x/2019/12/17/00121576584242199280496/Foto/L01A0060.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 7,
+    "fields": {
+        "name": "Torneo de Cartas 2022",
+        "description": "Torneo a través de un clasificatorio, que determinará el mejor jugador de la ETSII.",
+        "date": "2022-11-09T18:00:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://www.psicoactiva.com/wp-content/uploads/puzzleclopedia/cartas-300x225.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 8,
+    "fields": {
+        "name": "Gymkhana Innosoft 2023",
         "description": "Juego de competición en equipo en el que los participantes deben superar una serie de pruebas que de ingenio, habilidad, físicas y deportivas a lo largo de un recorrido.",
         "date": "2023-11-09T15:30:00Z",
         "place": "A3.11",
@@ -1028,9 +211,9 @@
 },
 {
     "model": "event.event",
-    "pk": 3,
+    "pk": 9,
     "fields": {
-        "name": "Torneo Ajedrez",
+        "name": "Torneo Ajedrez 2023",
         "description": "Serie de partidas de ajedrez, jugadas competitivamente para determinar un ganador individual.",
         "date": "2023-11-09T12:30:00Z",
         "place": "Sala de estudios",
@@ -1040,11 +223,11 @@
 },
 {
     "model": "event.event",
-    "pk": 4,
+    "pk": 10,
     "fields": {
-        "name": "Torneo Brawhalla",
+        "name": "Torneo Brawhalla 2023",
         "description": "Juego de plataforma de luchas donde los participantes se enfrentan para demostrar quién es o será el más grande de todos.",
-        "date": "2022-11-08T12:30:00Z",
+        "date": "2023-11-08T12:30:00Z",
         "place": "I2.35",
         "photo": "https://www.powergamingnetwork.com/wp-content/uploads/2021/02/maxresdefault-2021-02-02T163439.503-1024x576.jpg",
         "status": "Abierto"
@@ -1052,9 +235,9 @@
 },
 {
     "model": "event.event",
-    "pk": 5,
+    "pk": 11,
     "fields": {
-        "name": "Escape Room",
+        "name": "Escape Room 2023",
         "description": "Juego de aventura físico y mental, donde un grupo de jugadores estarán encerrados en una habitación, donde deberán solucionar una serie de enigmas ...",
         "date": "2023-11-09T17:30:00Z",
         "place": "F0.84",
@@ -1064,9 +247,9 @@
 },
 {
     "model": "event.event",
-    "pk": 6,
+    "pk": 12,
     "fields": {
-        "name": "Torneo de Bolos",
+        "name": "Torneo de Bolos 2023",
         "description": "Cada jugador deberá derribar el mayor número posible de bolos lanzando una bola.",
         "date": "2023-11-09T10:00:00Z",
         "place": "ETSII",
@@ -1076,9 +259,9 @@
 },
 {
     "model": "event.event",
-    "pk": 7,
+    "pk": 13,
     "fields": {
-        "name": "Torneo Futbolín",
+        "name": "Torneo Futbolín 2023",
         "description": "Torneo individual en el que los participantes tendrán que ganar una serie de partidos para que el que consiga más victorias se convierta en el ganador.",
         "date": "2023-11-10T18:00:00Z",
         "place": "Anunnakis Café-Bar",
@@ -1088,11 +271,11 @@
 },
 {
     "model": "event.event",
-    "pk": 8,
+    "pk": 14,
     "fields": {
-        "name": "Torneo de Cartas",
+        "name": "Torneo de Cartas 2023",
         "description": "Torneo a través de un clasificatorio, que determinará el mejor jugador de la ETSII.",
-        "date": "2022-11-08T18:00:00Z",
+        "date": "2023-11-08T18:00:00Z",
         "place": "Sala de estudios",
         "photo": "https://www.psicoactiva.com/wp-content/uploads/puzzleclopedia/cartas-300x225.jpg",
         "status": "Abierto"
@@ -1102,62 +285,62 @@
     "model": "score.score",
     "pk": 1,
     "fields": {
-        "participant": 5,
-        "event": 3,
-        "value": 90
+        "participant": 6,
+        "event": 1,
+        "value": 50
     }
 },
 {
     "model": "score.score",
     "pk": 2,
     "fields": {
-        "participant": 8,
-        "event": 3,
-        "value": 67
+        "participant": 4,
+        "event": 1,
+        "value": 97
     }
 },
 {
     "model": "score.score",
     "pk": 3,
     "fields": {
-        "participant": 6,
-        "event": 3,
-        "value": 65
+        "participant": 5,
+        "event": 1,
+        "value": 88
     }
 },
 {
     "model": "score.score",
     "pk": 4,
     "fields": {
-        "participant": 9,
+        "participant": 2,
         "event": 2,
-        "value": 50
+        "value": 90
     }
 },
 {
     "model": "score.score",
     "pk": 5,
     "fields": {
-        "participant": 7,
+        "participant": 5,
         "event": 2,
-        "value": 97
+        "value": 67
     }
 },
 {
     "model": "score.score",
     "pk": 6,
     "fields": {
-        "participant": 8,
+        "participant": 3,
         "event": 2,
-        "value": 88
+        "value": 65
     }
 },
 {
     "model": "score.score",
     "pk": 7,
     "fields": {
-        "participant": 6,
-        "event": 4,
+        "participant": 3,
+        "event": 3,
         "value": 100
     }
 },
@@ -1165,8 +348,8 @@
     "model": "score.score",
     "pk": 8,
     "fields": {
-        "participant": 5,
-        "event": 4,
+        "participant": 2,
+        "event": 3,
         "value": 70
     }
 },
@@ -1174,8 +357,8 @@
     "model": "score.score",
     "pk": 9,
     "fields": {
-        "participant": 9,
-        "event": 4,
+        "participant": 6,
+        "event": 3,
         "value": 64
     }
 },
@@ -1183,8 +366,8 @@
     "model": "score.score",
     "pk": 10,
     "fields": {
-        "participant": 7,
-        "event": 5,
+        "participant": 4,
+        "event": 4,
         "value": 95
     }
 },
@@ -1192,8 +375,8 @@
     "model": "score.score",
     "pk": 11,
     "fields": {
-        "participant": 8,
-        "event": 5,
+        "participant": 5,
+        "event": 4,
         "value": 46
     }
 },
@@ -1201,8 +384,8 @@
     "model": "score.score",
     "pk": 12,
     "fields": {
-        "participant": 5,
-        "event": 5,
+        "participant": 2,
+        "event": 4,
         "value": 32
     }
 },
@@ -1210,8 +393,8 @@
     "model": "score.score",
     "pk": 13,
     "fields": {
-        "participant": 6,
-        "event": 6,
+        "participant": 3,
+        "event": 5,
         "value": 93
     }
 },
@@ -1219,8 +402,8 @@
     "model": "score.score",
     "pk": 14,
     "fields": {
-        "participant": 8,
-        "event": 6,
+        "participant": 5,
+        "event": 5,
         "value": 78
     }
 },
@@ -1228,8 +411,8 @@
     "model": "score.score",
     "pk": 15,
     "fields": {
-        "participant": 9,
-        "event": 6,
+        "participant": 6,
+        "event": 5,
         "value": 20
     }
 },
@@ -1237,8 +420,8 @@
     "model": "score.score",
     "pk": 16,
     "fields": {
-        "participant": 5,
-        "event": 7,
+        "participant": 2,
+        "event": 6,
         "value": 96
     }
 },
@@ -1246,8 +429,8 @@
     "model": "score.score",
     "pk": 17,
     "fields": {
-        "participant": 6,
-        "event": 7,
+        "participant": 3,
+        "event": 6,
         "value": 94
     }
 },
@@ -1255,8 +438,8 @@
     "model": "score.score",
     "pk": 18,
     "fields": {
-        "participant": 7,
-        "event": 7,
+        "participant": 4,
+        "event": 6,
         "value": 73
     }
 },
@@ -1264,8 +447,8 @@
     "model": "score.score",
     "pk": 19,
     "fields": {
-        "participant": 8,
-        "event": 8,
+        "participant": 5,
+        "event": 7,
         "value": 97
     }
 },
@@ -1273,8 +456,8 @@
     "model": "score.score",
     "pk": 20,
     "fields": {
-        "participant": 5,
-        "event": 8,
+        "participant": 2,
+        "event": 7,
         "value": 68
     }
 },
@@ -1282,8 +465,8 @@
     "model": "score.score",
     "pk": 21,
     "fields": {
-        "participant": 9,
-        "event": 8,
+        "participant": 6,
+        "event": 7,
         "value": 47
     }
 }
