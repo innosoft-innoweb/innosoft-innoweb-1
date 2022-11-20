@@ -44,7 +44,6 @@
 li{
     font-family: var(--ff-secondary);
     font-weight: 400;
-    color: var(--clr-black);
     letter-spacing: 0em;
 }
 
@@ -102,6 +101,10 @@ label{
 
 .form-register{
     margin-bottom:5px;
+}
+
+.errorlist{
+    color: red;
 }
 
 @media (max-width: 900px){
