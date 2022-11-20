@@ -25,6 +25,7 @@ def eventView(response, id):
             first = scores[0].participant
             first.name = first.get_short()
 
+    e.date = e.date.strftime("%d/%m/%Y a las %H:%M")
    
     return render(response, "base_EVENT.html", {
         "e": e, 

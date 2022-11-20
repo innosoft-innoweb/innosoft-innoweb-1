@@ -40,15 +40,15 @@ def home(request):
 
         if len(participants) >= 3:
             third = participants[2]
-            third.name = third.get_short()
+            third.username = third.get_username()
         
         if len(participants) >= 2:
             second = participants[1]
-            second.name = second.get_short()
+            second.username = second.get_username()
         
         if len(participants) >= 1:
             first = participants[0]
-            first.name = first.get_short()
+            first.username = first.get_username()
 
     return render(request, 'base_HOME.html', 
         {'events': sample_events,

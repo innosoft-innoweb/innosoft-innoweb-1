@@ -138,6 +138,7 @@
     border-radius: 5px;
     padding: 5px;
     font-family: var(--ff-primary);
+    font-weight: bold;
 }
 
 .sign-up {
