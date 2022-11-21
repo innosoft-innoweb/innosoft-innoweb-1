@@ -17,7 +17,15 @@
             {% comment %} ADD SAME LINKS IN BOTTOM SECTION FOR MOBILE SUPPORT {% endcomment %}
             {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
             {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
+            
+            {% if user.is_authenticated %}
+                <a class="navbar-link navbar-link-primary" href="/participante/{{user.id}}">
+                    {{ user.username }}
+                    <img src="{{ user.photo }}">
+                </a>
+            {% else %}    
             <a class="navbar-link navbar-link-primary" href="/login">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+            {% endif %}
         </div>
         <div class="navbar-toggle">
             <a href="#">

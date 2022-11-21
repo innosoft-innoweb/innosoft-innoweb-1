@@ -9,6 +9,7 @@
                 <h2>{{e.username}}</h2>
                 <h2>{{e.email}}</h2>
                 <img src={{e.photo}}>
+                <h2><a href="{% url 'logout' %}">Logout</a></h2>
             {% endblock %}
     </body>
 </html>

@@ -6,6 +6,10 @@ def index(request):
 
 def home(request):
 
+    user = None
+    if request.user.is_authenticated:
+        user = request.user
+
     event = {
                 "name": "Evento",
                 "description": "Esto es un evento",
@@ -19,6 +23,6 @@ def home(request):
         event, event, event, event, event, event, event, event, event
     ]
     
-    return render(request, 'base_HOME.html', {'events': sample_events})
+    return render(request, 'base_HOME.html', {'user': user, 'events': sample_events})
     
 
