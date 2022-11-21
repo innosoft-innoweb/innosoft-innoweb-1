@@ -1,21 +1,31 @@
 .tftable{
     border-spacing:0;
-    
+    width: 95%;
+    margin-left: 10px;
 }
 
-tr{
+@media(max-width: 650px) {
+    .tftable {
+        width: 90%;
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+.tftable tr{
     font-family: var(--ff-primary);
     color: var(--clr-dark-blue);
 } 
-th{
+
+.tftable th{
     padding-bottom: 1%;
     text-align: left;
     border-bottom: 2px solid;
     
 }
   
-td{
+.tftable td{
     padding-right: 6em;
     padding-top:1em;
 }
-  

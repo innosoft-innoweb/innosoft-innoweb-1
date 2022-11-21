@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% block title %}{{ participant.username }} {% endblock %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home-layout">
+
+
+    <div class="user-details-wrapper">
+        {% include "components/user_details.html" with p=participant total_points=total_points n_events=n_events %}
+    </div>
+    {% if my_profile %}
+    <div class="button-container">
+        <form method='get' action="{% url 'home' %}">
+            <button class="btn-logout" type="submit" name="logout" value="logout">Cerrar sesión</button>
+        </form>
+    </div>
+    {% endif %}
+    <div class="event-list-wrapper">
+        {% include "components/user_events.html" with events=u_events %}
+    </div>
+</div>
+
+{% endblock %}
