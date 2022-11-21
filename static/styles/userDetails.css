@@ -81,10 +81,7 @@
     }
     .user-details {
         padding-inline: 0rem;
-    }
-    .user-left-section{
-        display: block;
-        margin-left: 75px;
+        justify-content: center;
     }
     h1.user-points-number{
         font-size: 3em;
