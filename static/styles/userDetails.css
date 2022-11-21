@@ -16,11 +16,8 @@
     .user-details {
         flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 625px) {
-    .user-details {
-        padding-inline: 0rem;
+    h2.user-events-number{
+        font-size: 5em;
     }
 }
 
@@ -40,6 +37,9 @@
 @media screen and (max-width: 510px) {
     .user-left-section {
         flex-grow: 0.55;
+    }
+    h2.user-events-number{
+        font-size: 3em;
     }
 }
 
@@ -75,6 +75,22 @@
     align-content: center;
 }
 
+@media screen and (max-width: 625px) {
+    .user-stats {
+        justify-content: center;
+    }
+    .user-details {
+        padding-inline: 0rem;
+    }
+    .user-left-section{
+        display: block;
+        margin-left: 75px;
+    }
+    h1.user-points-number{
+        font-size: 3em;
+    }
+}
+
 .user-stats > * {
     height: 30%;
     width: 50%;
@@ -88,7 +104,7 @@
 .user-points-number {
     color: var(--clr-yellow);
     height: 10rem;
-    font-size: 9em;
+    font-size: 6em;
     font-weight: bold;
     display: flex;
     justify-content: flex-end;

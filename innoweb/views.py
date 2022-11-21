@@ -1,10 +1,14 @@
 from django.shortcuts import render
+from django.contrib.auth import logout
 
 # view for testing components
 def index(request):
     return render(request, 'index.html')
 
 def home(request):
+
+    if request.GET.get('logout') == 'logout':
+       logout(request)
 
     event = {
                 "name": "Evento",
