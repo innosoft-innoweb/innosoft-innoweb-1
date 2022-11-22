@@ -1,0 +1,134 @@
+.register-layout{
+    height: 100%;
+    background-image: url(https://theuniqueacademy.co.in/assets/images/test.png);
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+
+}
+
+.register-layout {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.container-register{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 var(--clr-light-blue);
+    padding: 1rem;
+    margin: 4rem;
+    max-width: 30rem;
+    width: 50%;
+}
+
+.titulo{
+    padding: 1rem;
+    margin-right: auto;
+    max-width: 30rem;
+    width: 50%
+
+}
+#error-form{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--clr-dark-blue);
+    margin-bottom: 5px;
+    
+}
+
+li{
+    font-family: var(--ff-secondary);
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+h4{
+    text-align: center;
+    margin-bottom: 20px;   
+}
+
+a{
+    font-family: var(--ff-primary);
+    text-decoration: none;
+}
+a:link{
+    color: var(--clr-dark-blue);
+    font-family: var(--ff-primary);
+    text-decoration:none;
+}
+a:visited{
+    color: var(--clr-light-blue);
+    font-family: var(--ff-primary);
+    text-decoration:none;
+}
+a:hover{
+    color: var(--clr-dark-blue);
+    font-family: var(--ff-primary);
+    text-decoration:none;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: var(--clr-dark-blue);
+
+}
+
+label{
+    font-family: var(--ff-primary);
+}
+
+.boton-registrarte{
+    background-color: var(--clr-light-blue);
+    color: rgb(254, 6, 6);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-family: var(--ff-primary);
+    font-weight: 300;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--clr-dark-blue);
+}
+
+.form-register{
+    margin-bottom:5px;
+}
+
+.errorlist{
+    color: red;
+}
+
+@media (max-width: 900px){
+    .titulo{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .register-layout{
+        flex-direction: column;
+    }
+    .container-register{
+        width: 70%;
+
+       
+    }
+
+    html{
+        background-image: url(https://theuniqueacademy.co.in/assets/images/test.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        
+    
+    
+    }
+}
