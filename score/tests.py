@@ -5,24 +5,25 @@ from participant.models import Participant
 from score.models import Score
 
 class ScoreTestCase(TestCase):
+
     def setUp(self):
         self.e1 = Event.objects.create(
-                            name="Evento 1", 
-                            description="Esta es la descripción del evento", 
-                            date=datetime.datetime.now(), 
-                            place="Etsii", 
-                            photo="https://img.freepik.com/foto-gratis/campo-cesped-nubes_1112-621.jpg?w=2000", 
+                            name="Evento 1",
+                            description="Esta es la descripción del evento",
+                            date=datetime.datetime.now(),
+                            place="Etsii",
+                            photo="https://img.freepik.com/foto-gratis/campo-cesped-nubes_1112-621.jpg?w=2000",
                             status="Abierto"
                             )
         self.p1 = Participant.objects.create(username = "juanperez", first_name="Juan", last_name="Perez", email="juanperez@gmail.com")
         self.score = Score.objects.create(participant=self.p1, event=self.e1, value=100)
 
         self.e2 = Event.objects.create(
-                            name="Evento 2", 
-                            description="Esta es la descripción del evento", 
-                            date=datetime.datetime.now(), 
-                            place="Etsii", 
-                            photo="https://img.freepik.com/foto-gratis/campo-cesped-nubes_1112-621.jpg?w=2000", 
+                            name="Evento 2",
+                            description="Esta es la descripción del evento",
+                            date=datetime.datetime.now(),
+                            place="Etsii",
+                            photo="https://img.freepik.com/foto-gratis/campo-cesped-nubes_1112-621.jpg?w=2000",
                             status="Abierto"
                             )
         self.p2 = Participant.objects.create(username = "juanperez2", first_name="Juan2", last_name="Perez2", email="juanperez2@gmail.com")
@@ -44,7 +45,7 @@ class ScoreTestCase(TestCase):
 
     def test_score_delete(self):
         self.score.delete()
-        
+
         self.assertEqual(Score.objects.count(), 0)
 
     def test_score_update(self):
