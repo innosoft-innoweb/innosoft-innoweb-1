@@ -27,6 +27,7 @@ def home(request):
     second = None
     third = None
     
+
     if len(scores) > 0:
         scores_dict = {}
         for score in scores:
@@ -56,3 +57,4 @@ def home(request):
         'second': second,
         'third': third
         })
+
