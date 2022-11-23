@@ -5,6 +5,7 @@ from participant.models import Participant
 class ParticipantTestCase(TestCase):
     def setUp(self):
         Participant.objects.create(username = "Amekit", first_name = "Tomas", last_name = "Camero", email = "tcamerob@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+        Participant.objects.create(username = "UserUpdate", first_name = "UserUpdate", last_name = "UserUpdate", email ="UserUpdate@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
         
     def test_participant_create(self):
         participant = Participant.objects.get(username = "Amekit")
@@ -18,7 +19,7 @@ class ParticipantTestCase(TestCase):
     def test_participant_delete(self):
         participant = Participant.objects.get(username="Amekit")
         participant.delete()
-        self.assertEqual(0,len(Participant.objects.all()))
+        self.assertEqual(1,Participant.objects.count())
     
     def test_participant_update(self):
         participant = Participant.objects.get(username="Amekit")
@@ -36,12 +37,41 @@ class ParticipantTestCase(TestCase):
         self.assertEqual(participant_nuevo.email,"Prueba@gmail.com")
         self.assertEqual(participant_nuevo.photo,"https://www.google.es")
         
-    @unittest.expectedFailure   
-    def test_participant_create_username_negative(self):
-        Participant.objects.create(username = "Amekit",first_name = "Tomas", last_name = "Camero", email = "tcamerob@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    #Create Tests
         
-   
+    def test_participant_create_email_duplicated(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User3", first_name = "Tomas", last_name = "Camero", email = "tcamerob@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+          
+    def test_participant_create_username_duplicated(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "Amekit",first_name = "User2", last_name = "User2", email = "User2@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    
+    def test_participant_create_photo_incorrect(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User4", first_name = "User4", last_name = "User4", email = "User4@gmail.com", photo = "urlincorrect")
+            
+    def test_participant_create_email_incorrect(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User5", first_name = "User5", last_name = "User5", email = "User5gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    
+    #Update Tests
+    
+    def test_participant_update_email_duplicated(self):
+        with self.assertRaises(Exception):
+            Participant.objects.update(username = "UserUpdate", first_name = "UserUpdate", last_name = "UserUpdate", email ="tcamerob@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
         
+    def test_participant_update_username_duplicated(self):
+        with self.assertRaises(Exception):
+            Participant.objects.update(username = "Amekit", first_name = "UserUpdate", last_name = "UserUpdate", email ="UserUpdate@gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    
+    def test_participant_update_photo_incorrect(self):
+        with self.assertRaises(Exception):
+            Participant.objects.update(username = "UserUpdate", first_name = "UserUpdate", last_name = "UserUpdate", email ="UserUpdate@gmail.com", photo = "noturl")
+            
+    def test_participant_update_email_incorrect(self):
+        with self.assertRaises(Exception):
+            Participant.objects.update(username = "UserUpdate", first_name = "UserUpdate", last_name = "UserUpdate", email ="UserUpdate", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
         
  
 
