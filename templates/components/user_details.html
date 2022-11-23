@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/userDetails.css' %}">
+</head>
+
+<div class="user-details">
+    <div class="user-left-section">
+        <img class="user-img" src={{p.photo}} alt="Profile pic">
+        <h3 class="user-name">{{p.first_name}} {{p.last_name}}</h3>
+    </div>
+    <div class="user-right-section">
+        <div class="user-stats">
+            <h1 class="user-points-number">{{total_points}}{{p.id}}</h1>
+            <h3 class="user-points-text">Puntos</h3>
+            <h2 class="user-events-number">{{n_events}}</h2>
+            <h3 class="user-events-text">Eventos</h3>
+        </div>
+        <div class="user-decoration">
+            <img src={% static 'illustrations/illustration_1.png'%} alt="">
+        </div>
+    </div>
+</div>
