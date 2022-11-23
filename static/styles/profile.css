@@ -1,0 +1,36 @@
+.user-details-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .user-details-wrapper {
+        margin-top: 0;
+    }
+
+}
+
+.event-list-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 2rem;
+    z-index: 5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-logout{
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    border-radius: 0.5rem;
+    font-family: var(--ff-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+}

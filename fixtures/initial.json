@@ -1,0 +1,473 @@
+[
+{
+    "model": "participant.participant",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$t2OIZxvgHmdsCv5I9Rejfi$h8Dw3EaSUSvIR2MluhS9kivGhtlODqon8DAsqnfqorA=",
+        "last_login": "2022-11-19T21:55:55.973Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-11-19T12:32:21.164Z",
+        "photo": "http://cdn.onlinewebfonts.com/svg/img_569204.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "participant.participant",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$76wN7UeBvyBejpGImOLzUY$3yzh2X3QZytLuXdfxK0iu+7YeglXDqpnLsJMCk6Xl+g=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ezegonmac",
+        "first_name": "Ezequiel",
+        "last_name": "González",
+        "email": "ezegonmac@alum.us.es",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-19T22:30:55Z",
+        "photo": "https://cdn-icons-png.flaticon.com/512/219/219983.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "participant.participant",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$0bMMjlGbdpGFeyifJ4cT93$5M/ldO1mTnO32RRhNiVfdWN2rgoqwq7o/Hmabzkjeuo=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tomcambor",
+        "first_name": "Tomás",
+        "last_name": "Camero",
+        "email": "tomcambor@alum.us.es",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-19T22:33:55Z",
+        "photo": "https://cdn-icons-png.flaticon.com/512/219/219988.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "participant.participant",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$GDELi1HPL9GR7jc2prdfEz$klw6GE6aGGWOnLsRUqNb3/Vuq31v70YlLjHiLdssGuI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "juasaljur",
+        "first_name": "Juan",
+        "last_name": "Salado",
+        "email": "juasaljur@alum.us.es",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-19T22:35:12Z",
+        "photo": "https://cdn-icons-png.flaticon.com/512/219/219986.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "participant.participant",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$mFG9jQ5UqareE5ec8jiLCd$zhc663R/7VSUdV3TEVvKuog3J32GRsB6AGVAgrum3RE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ismperort",
+        "first_name": "Ismael",
+        "last_name": "Pérez",
+        "email": "ismperort@alum.us.es",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-19T22:36:25Z",
+        "photo": "https://cdn-icons-png.flaticon.com/512/3003/3003035.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "participant.participant",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$v6L7NCSKzAg2tcGTz85IGk$StPHaoY5vBrMMa48ic7Z3XQGOow1wO2H9wJ9ZDiT36c=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "migromarj",
+        "first_name": "Miguel",
+        "last_name": "Romero",
+        "email": "migromarj@alum.us.es",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-11-19T22:37:26Z",
+        "photo": "https://cdn-icons-png.flaticon.com/512/206/206853.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "event.event",
+    "pk": 1,
+    "fields": {
+        "name": "Gymkhana Innosoft 2022",
+        "description": "Juego de competición en equipo en el que los participantes deben superar una serie de pruebas que de ingenio, habilidad, físicas y deportivas a lo largo de un recorrido.",
+        "date": "2022-11-10T15:30:00Z",
+        "place": "A3.11",
+        "photo": "https://1.bp.blogspot.com/-xY53vZ1BWag/XUAq3Tea5fI/AAAAAAAA-KE/Uh3XjGYKeQM40ABmul_nio7xinijoMvVgCLcBGAs/s1600/WhatsApp%2BImage%2B2019-07-30%2Bat%2B12.35.26%25281%2529.jpeg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 2,
+    "fields": {
+        "name": "Torneo Ajedrez 2022",
+        "description": "Serie de partidas de ajedrez, jugadas competitivamente para determinar un ganador individual.",
+        "date": "2022-11-10T12:30:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://i0.wp.com/thezugzwangblog.com/wp-content/uploads/2021/05/primer-torneo-de-ajedrez.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 3,
+    "fields": {
+        "name": "Torneo Brawhalla 2022",
+        "description": "Juego de plataforma de luchas donde los participantes se enfrentan para demostrar quién es o será el más grande de todos.",
+        "date": "2022-11-09T12:30:00Z",
+        "place": "I2.35",
+        "photo": "https://www.powergamingnetwork.com/wp-content/uploads/2021/02/maxresdefault-2021-02-02T163439.503-1024x576.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 4,
+    "fields": {
+        "name": "Escape Room 2022",
+        "description": "Juego de aventura físico y mental, donde un grupo de jugadores estarán encerrados en una habitación, donde deberán solucionar una serie de enigmas ...",
+        "date": "2022-11-10T17:30:00Z",
+        "place": "F0.84",
+        "photo": "https://www.resistanceroom.com/wp-content/uploads/escape-room-1.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 5,
+    "fields": {
+        "name": "Torneo de Bolos 2022",
+        "description": "Cada jugador deberá derribar el mayor número posible de bolos lanzando una bola.",
+        "date": "2022-11-10T10:00:00Z",
+        "place": "ETSII",
+        "photo": "https://curiosfera-historia.com/wp-content/uploads/Historia-de-los-bolos-1.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 6,
+    "fields": {
+        "name": "Torneo Futbolín 2022",
+        "description": "Torneo individual en el que los participantes tendrán que ganar una serie de partidos para que el que consiga más victorias se convierta en el ganador.",
+        "date": "2022-11-09T18:00:00Z",
+        "place": "Anunnakis Café-Bar",
+        "photo": "https://cflvdg.avoz.es/sc/hxvDMEBIAQAOCtrgmLOmyK18Tpc=/480x/2019/12/17/00121576584242199280496/Foto/L01A0060.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 7,
+    "fields": {
+        "name": "Torneo de Cartas 2022",
+        "description": "Torneo a través de un clasificatorio, que determinará el mejor jugador de la ETSII.",
+        "date": "2022-11-09T18:00:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://www.psicoactiva.com/wp-content/uploads/puzzleclopedia/cartas-300x225.jpg",
+        "status": "Finalizado"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 8,
+    "fields": {
+        "name": "Gymkhana Innosoft 2023",
+        "description": "Juego de competición en equipo en el que los participantes deben superar una serie de pruebas que de ingenio, habilidad, físicas y deportivas a lo largo de un recorrido.",
+        "date": "2023-11-09T15:30:00Z",
+        "place": "A3.11",
+        "photo": "https://1.bp.blogspot.com/-xY53vZ1BWag/XUAq3Tea5fI/AAAAAAAA-KE/Uh3XjGYKeQM40ABmul_nio7xinijoMvVgCLcBGAs/s1600/WhatsApp%2BImage%2B2019-07-30%2Bat%2B12.35.26%25281%2529.jpeg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 9,
+    "fields": {
+        "name": "Torneo Ajedrez 2023",
+        "description": "Serie de partidas de ajedrez, jugadas competitivamente para determinar un ganador individual.",
+        "date": "2023-11-09T12:30:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://i0.wp.com/thezugzwangblog.com/wp-content/uploads/2021/05/primer-torneo-de-ajedrez.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 10,
+    "fields": {
+        "name": "Torneo Brawhalla 2023",
+        "description": "Juego de plataforma de luchas donde los participantes se enfrentan para demostrar quién es o será el más grande de todos.",
+        "date": "2023-11-08T12:30:00Z",
+        "place": "I2.35",
+        "photo": "https://www.powergamingnetwork.com/wp-content/uploads/2021/02/maxresdefault-2021-02-02T163439.503-1024x576.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 11,
+    "fields": {
+        "name": "Escape Room 2023",
+        "description": "Juego de aventura físico y mental, donde un grupo de jugadores estarán encerrados en una habitación, donde deberán solucionar una serie de enigmas ...",
+        "date": "2023-11-09T17:30:00Z",
+        "place": "F0.84",
+        "photo": "https://www.resistanceroom.com/wp-content/uploads/escape-room-1.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 12,
+    "fields": {
+        "name": "Torneo de Bolos 2023",
+        "description": "Cada jugador deberá derribar el mayor número posible de bolos lanzando una bola.",
+        "date": "2023-11-09T10:00:00Z",
+        "place": "ETSII",
+        "photo": "https://curiosfera-historia.com/wp-content/uploads/Historia-de-los-bolos-1.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 13,
+    "fields": {
+        "name": "Torneo Futbolín 2023",
+        "description": "Torneo individual en el que los participantes tendrán que ganar una serie de partidos para que el que consiga más victorias se convierta en el ganador.",
+        "date": "2023-11-10T18:00:00Z",
+        "place": "Anunnakis Café-Bar",
+        "photo": "https://cflvdg.avoz.es/sc/hxvDMEBIAQAOCtrgmLOmyK18Tpc=/480x/2019/12/17/00121576584242199280496/Foto/L01A0060.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "event.event",
+    "pk": 14,
+    "fields": {
+        "name": "Torneo de Cartas 2023",
+        "description": "Torneo a través de un clasificatorio, que determinará el mejor jugador de la ETSII.",
+        "date": "2023-11-08T18:00:00Z",
+        "place": "Sala de estudios",
+        "photo": "https://www.psicoactiva.com/wp-content/uploads/puzzleclopedia/cartas-300x225.jpg",
+        "status": "Abierto"
+    }
+},
+{
+    "model": "score.score",
+    "pk": 1,
+    "fields": {
+        "participant": 6,
+        "event": 1,
+        "value": 50
+    }
+},
+{
+    "model": "score.score",
+    "pk": 2,
+    "fields": {
+        "participant": 4,
+        "event": 1,
+        "value": 97
+    }
+},
+{
+    "model": "score.score",
+    "pk": 3,
+    "fields": {
+        "participant": 5,
+        "event": 1,
+        "value": 88
+    }
+},
+{
+    "model": "score.score",
+    "pk": 4,
+    "fields": {
+        "participant": 2,
+        "event": 2,
+        "value": 90
+    }
+},
+{
+    "model": "score.score",
+    "pk": 5,
+    "fields": {
+        "participant": 5,
+        "event": 2,
+        "value": 67
+    }
+},
+{
+    "model": "score.score",
+    "pk": 6,
+    "fields": {
+        "participant": 3,
+        "event": 2,
+        "value": 65
+    }
+},
+{
+    "model": "score.score",
+    "pk": 7,
+    "fields": {
+        "participant": 3,
+        "event": 3,
+        "value": 100
+    }
+},
+{
+    "model": "score.score",
+    "pk": 8,
+    "fields": {
+        "participant": 2,
+        "event": 3,
+        "value": 70
+    }
+},
+{
+    "model": "score.score",
+    "pk": 9,
+    "fields": {
+        "participant": 6,
+        "event": 3,
+        "value": 64
+    }
+},
+{
+    "model": "score.score",
+    "pk": 10,
+    "fields": {
+        "participant": 4,
+        "event": 4,
+        "value": 95
+    }
+},
+{
+    "model": "score.score",
+    "pk": 11,
+    "fields": {
+        "participant": 5,
+        "event": 4,
+        "value": 46
+    }
+},
+{
+    "model": "score.score",
+    "pk": 12,
+    "fields": {
+        "participant": 2,
+        "event": 4,
+        "value": 32
+    }
+},
+{
+    "model": "score.score",
+    "pk": 13,
+    "fields": {
+        "participant": 3,
+        "event": 5,
+        "value": 93
+    }
+},
+{
+    "model": "score.score",
+    "pk": 14,
+    "fields": {
+        "participant": 5,
+        "event": 5,
+        "value": 78
+    }
+},
+{
+    "model": "score.score",
+    "pk": 15,
+    "fields": {
+        "participant": 6,
+        "event": 5,
+        "value": 20
+    }
+},
+{
+    "model": "score.score",
+    "pk": 16,
+    "fields": {
+        "participant": 2,
+        "event": 6,
+        "value": 96
+    }
+},
+{
+    "model": "score.score",
+    "pk": 17,
+    "fields": {
+        "participant": 3,
+        "event": 6,
+        "value": 94
+    }
+},
+{
+    "model": "score.score",
+    "pk": 18,
+    "fields": {
+        "participant": 4,
+        "event": 6,
+        "value": 73
+    }
+},
+{
+    "model": "score.score",
+    "pk": 19,
+    "fields": {
+        "participant": 5,
+        "event": 7,
+        "value": 97
+    }
+},
+{
+    "model": "score.score",
+    "pk": 20,
+    "fields": {
+        "participant": 2,
+        "event": 7,
+        "value": 68
+    }
+},
+{
+    "model": "score.score",
+    "pk": 21,
+    "fields": {
+        "participant": 6,
+        "event": 7,
+        "value": 47
+    }
+}
+]
