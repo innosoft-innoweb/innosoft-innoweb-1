@@ -54,7 +54,27 @@ class ParticipantTestCase(TestCase):
     def test_participant_create_email_incorrect(self):
         with self.assertRaises(Exception):
             Participant.objects.create(username = "User5", first_name = "User5", last_name = "User5", email = "User5gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_create_username_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(first_name = "User6", last_name = "User6", email = "User6gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_create_first_name_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User7", last_name = "User7", email = "User7gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_create_sur_name_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User8", first_name="User8", last_name = "User8", email = "User8gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
     
+    def test_participant_create_email_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User9", first_name="User9", last_name = "User9", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
+    
+    def test_participant_create_photo_blank(self):
+        with self.assertRaises(Exception):
+             Participant.objects.create(username = "User10", first_name="User10", last_name = "User10", email = "User10@gmail.com") 
+
     #Update Tests
     
     def test_participant_update_email_duplicated(self):
@@ -73,6 +93,24 @@ class ParticipantTestCase(TestCase):
         with self.assertRaises(Exception):
             Participant.objects.update(username = "UserUpdate", first_name = "UserUpdate", last_name = "UserUpdate", email ="UserUpdate", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
         
- 
+    def test_participant_update_username_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(first_name = "UserUpdate", last_name = "UserUpdate", email = "UserUpdategmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_update_first_name_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", last_name = "UserUpdate", email = "UserUpdategmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_update_sur_name_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", first_name="UserUpdate", last_name = "UserUpdate", email = "UserUpdategmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
+    
+    def test_participant_update_email_blank(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", first_name="UserUpdate", last_name = "UserUpdate", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
+    
+    def test_participant_update_photo_blank(self):
+        with self.assertRaises(Exception):
+             Participant.objects.create(username = "UserUpdate", first_name="UserUpdate", last_name = "UserUpdate", email = "User10@gmail.com") 
 
     
