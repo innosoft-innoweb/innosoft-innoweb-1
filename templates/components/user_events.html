@@ -1,0 +1,9 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
+</head>
+
+<h1 class="title-events">Eventos</h1>
+<hr class="events-line">
+
+{% include "components/table.html" with column1='Evento' column2='Posición' elements=events %}

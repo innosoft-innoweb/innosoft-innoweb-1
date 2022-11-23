@@ -24,7 +24,7 @@
                     <img src="{{ user.photo }}">
                 </a>
             {% else %}    
-            <a class="navbar-link navbar-link-primary" href="/login">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+                <a class="navbar-link navbar-link-primary" href="/login">Acceder</a>
             {% endif %}
         </div>
         <div class="navbar-toggle">
@@ -36,7 +36,17 @@
     <div class="navbar-bottomsection navbar-bottomsection-closed">
         {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
         {% comment %} <a class="navbar-link navbar-link-secondary" href="/">Enlace Ejemplo</a> {% endcomment %}
-        <a class="navbar-link navbar-link-primary" href="/login">Acceder</a> {% comment %} TODO: change url {% endcomment %}
+        
+        
+        {% if user.is_authenticated %}
+            <a class="navbar-link navbar-link-primary" href="/participante/{{user.id}}">
+                {{ user.username }}
+                <img src="{{ user.photo }}">
+            </a>
+        {% else %}    
+            <a class="navbar-link navbar-link-primary" href="/login">Acceder</a>
+        {% endif %}
+        {% comment %} <a class="navbar-link navbar-link-primary" href="/login">Acceder</a> TODO: change url {% endcomment %}
     </div>
 </div>
 
