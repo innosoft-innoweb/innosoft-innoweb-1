@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'participant.apps.ParticipantConfig',
     'event.apps.EventConfig',
     'score.apps.ScoreConfig',
+    'django_nose',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# STATIC_ROOT = BASE_DIR / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
