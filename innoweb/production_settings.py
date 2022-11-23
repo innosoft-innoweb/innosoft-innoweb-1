@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'participant.apps.ParticipantConfig',
     'event.apps.EventConfig',
     'score.apps.ScoreConfig',
-    'django_nose',
 ]
 
 MIDDLEWARE = [
