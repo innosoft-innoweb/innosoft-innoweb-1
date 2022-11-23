@@ -15,10 +15,10 @@
         </tr>
     {% for e in elements %}
         <tr>
-            <td>{{e.0}}</td>
-            <td>{{e.1}}</td>
-            <td>{{e.2}}</td>
-            <td><a href="{% url 'index' %}" class="btn btn-primary">Descargar</a></td>
+            <td>{{e.name}}</td>
+            <td>#{{e.position}}</td>
+            <td>{{e.points}}</td>
+            <td><a href="{% url 'home' %}" class="btn btn-primary">Descargar</a></td>
         </tr>
     {% endfor %}
     </tbody>

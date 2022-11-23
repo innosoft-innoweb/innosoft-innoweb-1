@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from score.models import Score
+from django.contrib.auth import logout
+
 
 # view for testing components
 def index(request):
@@ -7,6 +9,12 @@ def index(request):
 
 def home(request):
 
+    if request.GET.get('logout') == 'logout':
+       logout(request)
+    
+    user = None
+    if request.user.is_authenticated:
+        user = request.user
     event = {
                 "name": "Evento",
                 "description": "Esto es un evento",
@@ -26,6 +34,7 @@ def home(request):
     first = None
     second = None
     third = None
+
     
 
     if len(scores) > 0:

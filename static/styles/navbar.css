@@ -68,6 +68,13 @@
     font-size: 1.3em;
 }
 
+.navbar-topsection .navbar-link img {
+    height: 75%;
+    border: 2px solid var(--clr-white);
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
 .navbar-topsection .navbar-link-secondary {
     margin: 0 2em;
     height: 70%;
@@ -135,6 +142,13 @@
 
 .navbar-bottomsection .navbar-link-primary {
     border-top: 1px solid var(--clr-white);
+}
+
+.navbar-bottomsection .navbar-link img {
+    height: 2em;
+    border: 2px solid var(--clr-white);
+    border-radius: 50%;
+    margin-left: 1em;
 }
 
 .navbar-bottomsection-closed{
