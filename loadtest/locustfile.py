@@ -19,31 +19,31 @@ EVENT_ID = 1
 class DefHome(TaskSet):
 
     @task
-    def index(self):
+    def home(self):
         self.client.get("")
 
 class DefLogin(TaskSet):
 
     @task
-    def index(self):
+    def login(self):
         self.client.get("/login")
 
 class DefRegister(TaskSet):
 
     @task
-    def index(self):
+    def register(self):
         self.client.get("/registro")
 
 class DefParticipantProfile(TaskSet):
 
     @task
-    def index(self):
+    def participant_profile(self):
         self.client.get("/participante/{0}".format(PARTICIPANT_ID))
 
 class DefEventDetails(TaskSet):
 
     @task
-    def index(self):
+    def event_details(self):
         self.client.get("/evento/{0}".format(EVENT_ID))
 
 class Home(HttpUser):
