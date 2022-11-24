@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 
 
-class TestsLogin(TestCase):
+class TestsLogin():
     
     def test_login_success(self):
         #credentials
