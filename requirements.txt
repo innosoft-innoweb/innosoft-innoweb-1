@@ -2,3 +2,4 @@ Django==4.1.2
 mysqlclient==2.1.1
 selenium
 locust
+webdriver_manager
