@@ -1,3 +1,5 @@
 Django==4.1.2
 mysqlclient==2.1.1
 selenium
+coverage==4.5.2
+locust
