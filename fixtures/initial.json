@@ -9,7 +9,7 @@
         "username": "admin",
         "first_name": "",
         "last_name": "",
-        "email": "",
+        "email": "admin@innoweb.com",
         "is_staff": true,
         "is_active": true,
         "date_joined": "2022-11-19T12:32:21.164Z",
