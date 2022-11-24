@@ -13,10 +13,10 @@
         <h1>Regístrate</h1>
     </div>
     <div class="container-register">
-    <form method="POST" action="{% url 'register' %}" class="form-register">
+    <form method="POST" action="{% url 'register' %}" class="form-register" novalidate>
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="boton-registrarte" type="submit">Regístrate</button>
+        <button class="boton-registrarte" id="id_submit_button" type="submit">Regístrate</button>
     </form>
     </div>
 </div>

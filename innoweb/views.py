@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from participant.models import Participant
 from score.models import Score
 from django.contrib.auth import logout
 
@@ -8,6 +9,8 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
+    #print all participants
+    print(Participant.objects.all())
 
     if request.GET.get('logout') == 'logout':
        logout(request)
