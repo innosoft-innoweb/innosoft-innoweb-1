@@ -92,14 +92,13 @@ class ScoreTestCase(TestCase):
         with self.assertRaises(Exception):
             score2 = Score.objects.create(participant=self.p1, event=self.e1, value=100)
             score2.save()
-        
+
     def test_score_participant_on_delete(self):
         with self.assertRaises(Exception):
             self.p1.delete()
             self.score = Score.objects.get(participant=self.p1, event=self.e1)
-    
+
     def test_score_event_on_delete(self):
         with self.assertRaises(Exception):
             self.e1.delete()
             self.score = Score.objects.get(participant=self.p1, event=self.e1)
-        

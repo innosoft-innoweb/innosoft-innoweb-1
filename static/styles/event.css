@@ -1,5 +1,3 @@
-/*Events CSS*/
-
 /*Events list*/
 
 .title-events {
@@ -63,6 +61,7 @@
     margin: 10px;
     padding: 0px;
     max-width: 350px;
+    min-width: 200px;
     display: block;
     background-color: var(--clr-light-blue);
     cursor: pointer;
@@ -79,4 +78,134 @@
 
 .event-card:hover .event-image{
     border: 1px solid var(--clr-light-blue);
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 50px;
+}
+
+.event-header { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 1rem ;
+    gap: 4rem 4rem;
+    flex-wrap: wrap;
+}
+
+.podium-wrapper-event {
+    width: 400px;
+}
+
+.event-description {
+    margin: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 50px
+}
+
+
+
+/* Participants */
+.participants h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.participants-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    flex-wrap: wrap-reverse;
+    row-gap: 1rem;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+
+.status {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--ff-primary);
+    font-weight: bold;
+}
+
+.sign-up {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--ff-primary);
+    color: #ffffff;
+    background-color: var(--clr-dark-blue-lighter);
+}
+
+.line-break {
+    border: 1px solid var(--clr-dark-blue-darker);
+    border-radius: 5px;
+    padding: 2px;
+    background-color: var(--clr-dark-blue-darker);
+}
+
+.participants-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.tftable{
+    border-spacing:0;
+    
+}
+
+tr{
+    font-family: var(--ff-primary);
+    color: var(--clr-dark-blue);
+    text-align: center;
+} 
+th{
+    text-align: center;
+    border-bottom: 2px solid;
+    padding: 1% 30px;
+    
+}
+  
+td{
+    text-align: center;
+    padding-top:1em;
+}
+  
+.download-certificate {
+    text-decoration: none;
+    padding-right: 5px;
+}
+
+@media(max-width: 720px) {
+    .participants-list {
+        padding: 0;
+        overflow-x: auto;
+    }
+    
+    .event-details {
+        padding: 100px 20px;
+    }
+
+}
+
+@media(max-width: 430px) {
+    .event-details {
+        padding: 100px 0;
+    }
 }
