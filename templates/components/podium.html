@@ -5,21 +5,42 @@
 <div class="podium">
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{{ second.photo }}"/></a>
+      {% url 'profile' second.id as second_url %}
+      {% if second_url %}
+      <a href="{{ second_url }}"> 
+        <img class="podium-photo" src="{{ second.photo }}"/>
+      {% else %} 
+      <a> 
+      {% endif %}
+      </a>
       <p class="podium-winner">{{ second.username }}</p>
     </div>
     <div class="podium-position second">2</div>
   </div>
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{{ first.photo }}"/></a>
+      {% url 'profile' first.id as first_url %}
+      {% if first_url %}
+      <a href="{{ first_url }}"> 
+        <img class="podium-photo" src="{{ first.photo }}"/>
+      {% else %} 
+      <a>
+      {% endif %}
+      </a>
       <p class="podium-winner">{{ first.username }}</p>
     </div>
     <div class="podium-position first">1</div>
   </div>
   <div class="podium-item">
     <div class="podium-winner-wrapper">
-      <a><img class="podium-photo" src="{{ third.photo }}"/></a>
+      {% url 'profile' third.id as third_url %}
+      {% if third_url %}
+      <a href="{{ third_url }}">
+        <img class="podium-photo" src="{{ third.photo }}"/>
+      {% else %}
+      <a>
+      {% endif %}
+    </a>
       <p class="podium-winner">{{ third.username }}</p>
     </div>
     <div class="podium-position third">3</div>

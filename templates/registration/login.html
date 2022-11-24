@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-    {% block title %}Login{% endblock %}
+    {% block title %}Innoweb - Inicio Sesión{% endblock %}
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">
@@ -27,7 +27,6 @@
     {% if form.errors %}
         <p id="error-form">Tu nombre o contraseña no son correctos. Por favor intentalo de nuevo.</p>
     {% endif %}
-    <h4><a href="#">Registrarse</a></h4>
     <h4><a href="{% url 'password_reset' %}">¿Has olvidado la contraseña?</a></h4>
     <h4><a href="{% url 'register' %}">¿Aún no tienes cuenta? ¡Regístrate!</a></h4>
 
