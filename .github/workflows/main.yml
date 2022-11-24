@@ -42,6 +42,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install codacy-coverage
+    - name: Make Migrations and Migrate
+      run: | 
+        python ./manage.py makemigrations
+        python ./manage.py migrate
     - name: Run Tests
       run: | 
         coverage run --branch --source=. ./manage.py test  --keepdb 
