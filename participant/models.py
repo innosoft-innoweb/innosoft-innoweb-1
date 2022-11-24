@@ -20,6 +20,9 @@ class Participant(AbstractUser):
     def get_last_name(self):
         return self.last_name
 
+    def get_complete_name(self):
+        return self.first_name + " " + self.last_name
+
     def get_short(self):
         return self.first_name + " " + self.last_name[0] + "."
 
