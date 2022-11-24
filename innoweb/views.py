@@ -3,30 +3,23 @@ from score.models import Score
 from django.contrib.auth import logout
 
 
+from event.models import Event
+
 # view for testing components
 def index(request):
     return render(request, 'index.html')
 
 def home(request):
-
+    
+    events = Event.objects.filter(status='Abierto')
+    
     if request.GET.get('logout') == 'logout':
        logout(request)
     
     user = None
     if request.user.is_authenticated:
         user = request.user
-    event = {
-                "name": "Evento",
-                "description": "Esto es un evento",
-                "date": "2023-01-01",
-                "place": "Lugar 1",
-                "image": "https://picsum.photos/300/300/?random",
-                "state": "Active",
-            }
 
-    sample_events = [
-        event, event, event, event, event, event, event, event, event
-    ]
 
     
     scores = Score.objects.order_by('-value')
@@ -34,7 +27,6 @@ def home(request):
     first = None
     second = None
     third = None
-
     
 
     if len(scores) > 0:
@@ -61,7 +53,7 @@ def home(request):
             first.username = first.get_username()
 
     return render(request, 'base_HOME.html', 
-        {'events': sample_events,
+        {'events': events,
         'first': first,
         'second': second,
         'third': third
