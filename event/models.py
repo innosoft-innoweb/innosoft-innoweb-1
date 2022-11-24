@@ -16,6 +16,12 @@ class Event(models.Model):
             raise ValueError('Status no válido')
         val = URLValidator()
         val(self.photo)
+        if self.name == "":
+            raise ValueError('Name is blank')
+        if self.description == "":
+            raise ValueError('Description is blank')
+        if self.place == "":
+            raise ValueError('Place is blank')
         super(Event, self).save(*args, **kwargs)
 
     def __str__(self):
