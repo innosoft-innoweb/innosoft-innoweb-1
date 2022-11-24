@@ -52,7 +52,7 @@ class ScoreTestCase(TestCase):
         new_e = Event.objects.get(name="Evento 2")
         new_p = Participant.objects.get(username="juanperez2")
         new_value = 500
-        
+
         self.score.participant = new_p
         self.score.event = new_e
         self.score.value = new_value
