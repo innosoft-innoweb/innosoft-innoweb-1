@@ -1,9 +1,11 @@
 from selenium import webdriver
 from django.test import TestCase
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 
 
-class TestsLogin():
+
+class TestsLogin(TestCase):
     
     def test_login_success(self):
         #credentials
@@ -26,7 +28,9 @@ class TestsLogin():
         WebDriverWait(driver=driver, timeout=10).until(
             lambda x: x.execute_script("return document.readyState === 'complete'")
         )
-            
+
+        
+        assert driver.find_element(By.CLASS_NAME,"podium").is_enabled() == True
         # close the driver
         driver.close()
         
@@ -60,7 +64,8 @@ class TestsLogin():
         # if we find that error message within errors, then login is failed
         if (len(errors)):
             print("Login failed")
-            
+        
+        assert driver.find_element("name", "username").is_enabled() == True
         # close the driver
         driver.close()
         
@@ -94,6 +99,7 @@ class TestsLogin():
         # if we find that error message within errors, then login is failed
         if (len(errors)):
             print("Login failed")
-            
+
+        assert driver.find_element("name", "password").is_enabled() == True
         # close the driver
         driver.close()
