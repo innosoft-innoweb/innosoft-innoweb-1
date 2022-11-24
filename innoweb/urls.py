@@ -22,8 +22,6 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('pruebaTablaParticipante/', pruebaTablaParticipante, name='pruebaTablaParticipante'),
     path('', home, name='home'),
     path('evento/', include('event.urls')),
     path('index/', index, name='index'),
