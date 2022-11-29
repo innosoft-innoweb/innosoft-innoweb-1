@@ -1,7 +1,8 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from selenium.webdriver.common.by import By
+from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 
 
 
@@ -13,7 +14,9 @@ class LoginViewTest(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super(LoginViewTest, cls).setUpClass()
-        cls.browser = webdriver.Chrome(ChromeDriverManager().install())
+        options = webdriver.ChromeOptions()
+        options.headless = True
+        cls.browser = webdriver.Chrome(options=options)
 
 
     @classmethod
