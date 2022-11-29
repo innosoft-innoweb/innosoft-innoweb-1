@@ -1,6 +1,7 @@
 FROM python:3.10.7
 
 ENV PYTHONUNBUFFERED 1
+ENV HOST_URL host.docker.internal
 
 RUN mkdir /code
 WORKDIR /code
