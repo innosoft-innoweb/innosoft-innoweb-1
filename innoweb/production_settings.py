@@ -84,11 +84,10 @@ WSGI_APPLICATION = 'innoweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'  : 'django.db.backends.mysql',
-        'NAME'    : 'innowebdb',
-        'USER'    : 'innosoft',
-        'PASSWORD': 'innosoft-2022',
-        'HOST'    : 'db',
-        'PORT'    : '3307',
+        'NAME'    : 'innosoftinnoweb$innowebdb',
+        'USER'    : 'innosoftinnoweb',
+        'PASSWORD': 'Inn0$0ft_2k22',
+        'HOST'    : 'innosoftinnoweb.mysql.pythonanywhere-services.com',
     }
 }
 
