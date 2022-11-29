@@ -70,7 +70,6 @@ class ParticipantTestCase(TestCase):
     def test_participant_create_email_blank(self):
         with self.assertRaises(Exception):
             Participant.objects.create(username = "User9", first_name="User9", last_name = "User9", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
-    
 
     #Update Tests
     

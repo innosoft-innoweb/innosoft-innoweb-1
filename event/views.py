@@ -5,9 +5,10 @@ from score.models import Score
 
 # Create your views here.
 
-def eventView(response, id):
+def event_view(response, id):
+
     e = Event.objects.get(id=id)
-    
+
     scores = Score.objects.filter(event=e).order_by('-value')
 
     first = None
@@ -26,7 +27,7 @@ def eventView(response, id):
             first.name = first.get_short()
 
     e.date = e.date.strftime("%d/%m/%Y a las %H:%M")
-   
+
     return render(response, "base_EVENT.html", {
         "e": e, 
         "scores": scores,

@@ -1,8 +1,8 @@
-<a class="event-card" href="#">
+<a class="event-card" href="{% url 'event' event.id %}">
     <h2 class="title-event">
         {{ event.name}}
     </h2>
     <div class="image-card">
-        <img class="event-image" src= {{ event.image }}/>    
+        <img class="event-image" src={{event.photo}}>  
     </div>
 </a> 

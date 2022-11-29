@@ -13,12 +13,12 @@
             <th>Puntos</th>
             <th>Diploma</th>
         </tr>
-    {% for e in elements %}
+    {% for e in events %}
         <tr>
             <td>{{e.name}}</td>
             <td>#{{e.position}}</td>
             <td>{{e.points}}</td>
-            <td><a href="{% url 'home' %}" class="btn btn-primary">Descargar</a></td>
+            <td><a href="{% url 'certificate' e.id p.id %}" target="_blank" class="btn btn-primary">Descargar</a></td>
         </tr>
     {% endfor %}
     </tbody>
