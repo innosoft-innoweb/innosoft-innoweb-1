@@ -15,8 +15,6 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-    #print all participants
-    print(Participant.objects.all())
 
     
     events = Event.objects.filter(status='Abierto')
