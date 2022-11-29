@@ -88,7 +88,7 @@ DATABASES = {
         'NAME'    : 'innowebdb',
         'USER'    : 'innosoft',
         'PASSWORD': 'innosoft-2022',
-        'HOST'    : '127.0.0.1',
+        'HOST'    : 'db',
         'PORT'    : '3307',
     }
 }
