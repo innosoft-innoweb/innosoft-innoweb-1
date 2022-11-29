@@ -68,16 +68,32 @@
     text-decoration: none;
 }
 
+.event-details .event-card{
+    cursor: auto;
+}
+
 .event-card:hover{
     background-color: var(--clr-dark-blue);
+}
+
+.event-details .event-card:hover{
+    background-color: var(--clr-light-blue);
 }
 
 .event-card:hover .title-event{
     color: var(--clr-white);
 }
 
+.event-details .event-card:hover .title-event{
+    color: var(--clr-dark-blue);
+}
+
 .event-card:hover .event-image{
     border: 1px solid var(--clr-light-blue);
+}
+
+.event-details .event-card:hover .event-image{
+    border: 1px solid var(--clr-dark-blue);
 }
 
 .event-details {

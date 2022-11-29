@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-    {% block title %}{{ e.name }}{% endblock %}
+    {% block title %}Innoweb - {{ e.name }}{% endblock %}
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
@@ -62,7 +62,7 @@
                     <td class="participant-name">{{ s.participant.get_name }}</td>
                     <td class="participant-surname">{{ s.participant.get_last_name }}</td>
                     <td class="participant-score">{{ s.value }}</td>
-                    <td class="participant-certificate"><a href="#" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
+                    <td class="participant-certificate"><a href="{% url 'certificate' e.id s.participant.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
                 {% endfor %}
             </table>
         </div>

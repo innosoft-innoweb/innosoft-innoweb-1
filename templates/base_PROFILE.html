@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-{% block title %}{{ participant.username }} {% endblock %}
+{% block title %}Innoweb - {{ participant.username }} {% endblock %}
 
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'styles/profile.css' %}">
@@ -23,7 +23,7 @@
     </div>
     {% endif %}
     <div class="event-list-wrapper">
-        {% include "components/user_events.html" with events=u_events %}
+        {% include "components/user_events.html" with events=u_events p=participant %}
     </div>
 </div>
 
