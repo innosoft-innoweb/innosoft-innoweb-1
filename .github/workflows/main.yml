@@ -48,6 +48,7 @@ jobs:
         python ./manage.py migrate
     - name: Run Tests
       run: | 
+        sudo apt-get install chromium-browser chromium-chromedriver
         coverage run --branch --source=. ./manage.py test  --keepdb 
         coverage xml 
     - name: Codacy Coverage Reporter
