@@ -4,3 +4,4 @@ selenium
 coverage==4.5.2
 locust
 Pillow==9.3.0
+webdriver_manager
