@@ -21,7 +21,9 @@ class RegisterViewTest(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super(RegisterViewTest, cls).setUpClass()
-        cls.browser = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.headless= True
+        cls.browser = webdriver.Chrome(options=options)
 
     @classmethod
     def tearDownClass(cls):
