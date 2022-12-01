@@ -4,6 +4,6 @@ from . import views
 
 
 urlpatterns = [
-   path('<int:id>', views.eventView, name='event'),
+   path('<int:id>', views.event_view, name='event'),
 
 ]

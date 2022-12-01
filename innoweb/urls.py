@@ -28,4 +28,5 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('participante/', include('participant.urls')),
     path('puntuacion/', include('score.urls')),
+    path('certificate/<int:event_id>/<int:participant_id>', certificate, name='certificate'),
 ]

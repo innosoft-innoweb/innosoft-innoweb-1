@@ -32,6 +32,7 @@ def profile(request, id):
 
      for e in events_aux:
           event = {
+               "id": e.event.id,
                'name': e.event.name,
                'points': e.value,
                'position': get_position(p, e.event)
