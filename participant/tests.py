@@ -11,7 +11,9 @@ class ProfileViewTest(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super(ProfileViewTest, cls).setUpClass()
-        cls.browser = webdriver.Chrome(ChromeDriverManager().install())
+        options = webdriver.ChromeOptions()
+        options.headless = True
+        cls.browser = webdriver.Chrome(options=options)
 
     @classmethod
     def tearDownClass(cls):
@@ -21,7 +23,7 @@ class ProfileViewTest(StaticLiveServerTestCase):
     def test_title(self):
 
         PORT = self.live_server_url.split(":")[2]
-        titles = ["ezegonmac", "tomcambor","juasaljur","ismperort","migromarj"]
+        titles = ["Innoweb - ezegonmac", "Innoweb - tomcambor","Innoweb - juasaljur","Innoweb - ismperort","Innoweb - migromarj"]
 
         self.browser.get(self.live_server_url)
 
