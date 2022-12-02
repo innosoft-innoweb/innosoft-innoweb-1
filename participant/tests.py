@@ -74,6 +74,18 @@ class ParticipantTestCase(TestCase):
         with self.assertRaises(Exception):
             Participant.objects.create(username = "User9", first_name="User9", last_name = "User9", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png") 
 
+    def test_participant_create_first_name_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User10", first_name = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",last_name = "User10", email = "User10gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_create_last_name_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User11", first_name = "User11",last_name = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU", email = "User11gmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    
+    def test_participant_create_photo_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "User12", first_name = "User12",last_name = "User12", email = "User12gmail.com", photo = "https://UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUcdn-icons-png.flaticon.com/512/149/149071.png")        
+      
     #Update Tests
     
     def test_participant_update_email_duplicated(self):
@@ -110,7 +122,19 @@ class ParticipantTestCase(TestCase):
     
     def test_participant_update_photo_blank(self):
         with self.assertRaises(Exception):
-             Participant.objects.create(username = "UserUpdate", first_name="UserUpdate", last_name = "UserUpdate", email = "User10@gmail.com") 
+             Participant.objects.create(username = "UserUpdate", first_name="UserUpdate", last_name = "UserUpdate", email = "User10@gmail.com")
+             
+    def test_participant_update_first_name_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", first_name = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU",last_name = "UserUpdate", email = "UserUpdategmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+            
+    def test_participant_update_last_name_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", first_name = "UserUpdate",last_name = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU", email = "UserUpdategmail.com", photo = "https://cdn-icons-png.flaticon.com/512/149/149071.png")
+    
+    def test_participant_update_photo_incorrect_lenght(self):
+        with self.assertRaises(Exception):
+            Participant.objects.create(username = "UserUpdate", first_name = "UserUpdate",last_name = "UserUpdate", email = "UserUpdategmail.com", photo = "https://UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUcdn-icons-png.flaticon.com/512/149/149071.png")  
 
 class ProfileViewTest(StaticLiveServerTestCase):
     fixtures = ['fixtures/initial.json']
