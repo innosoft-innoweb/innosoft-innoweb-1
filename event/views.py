@@ -2,9 +2,6 @@ from django.shortcuts import render
 from .models import Event
 from score.models import Score
 
-
-# Create your views here.
-
 def event_view(response, id):
 
     e = Event.objects.get(id=id)
@@ -35,4 +32,3 @@ def event_view(response, id):
         "second": second,
         "third": third
         })
-
