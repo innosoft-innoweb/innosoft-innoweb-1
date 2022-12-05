@@ -2,7 +2,6 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from participant.models import Participant
 from event.models import Event
-# from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium import webdriver
