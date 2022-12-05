@@ -96,6 +96,10 @@
     border: 1px solid var(--clr-dark-blue);
 }
 
+.event-details ul {
+    list-style-type: none;
+}
+
 .event-details {
     display: flex;
     flex-direction: column;
@@ -158,12 +162,20 @@
 }
 
 .sign-up {
-    border: 1px solid #000000;
+    border: 1px solid var(--clr-dark-blue);
     border-radius: 5px;
     padding: 5px;
     font-family: var(--ff-primary);
     color: #ffffff;
     background-color: var(--clr-dark-blue-lighter);
+    text-decoration: none;
+}
+
+.sign-up:hover {
+    background-color: var(--clr-yellow);
+    border: 1px solid var(--clr-yellow);
+    color: #000000;
+
 }
 
 .line-break {
@@ -206,6 +218,10 @@ td{
 .download-certificate {
     text-decoration: none;
     padding-right: 5px;
+}
+
+.download-certificate:hover {
+    text-decoration: underline;
 }
 
 @media(max-width: 720px) {

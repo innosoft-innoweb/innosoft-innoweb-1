@@ -8,7 +8,7 @@ e = importlib.import_module("event.models")
 class Score(models.Model):
     participant = models.ForeignKey(p.Participant, on_delete=models.CASCADE)
     event = models.ForeignKey(e.Event, on_delete=models.CASCADE)
-    value = models.PositiveIntegerField(default=0, null=False, blank=False)
+    value = models.PositiveIntegerField(default=0, null=True, blank=True)
 
     #unique constraint for participant and event
     class Meta:
