@@ -15,25 +15,22 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-
-    
     events = Event.objects.filter(status='Abierto')
-    
+
     if request.GET.get('logout') == 'logout':
        logout(request)
-    
+
     user = None
     if request.user.is_authenticated:
         user = request.user
 
 
-    
     scores = Score.objects.order_by('-value')
 
     first = None
     second = None
     third = None
-    
+
 
     if len(scores) > 0:
         scores_dict = {}
@@ -43,17 +40,17 @@ def home(request):
             else:
                 scores_dict[score.participant] = score.value
 
-        
+
         participants = sorted(scores_dict, key=scores_dict.get, reverse=True)
 
         if len(participants) >= 3:
             third = participants[2]
             third.username = third.get_username()
-        
+
         if len(participants) >= 2:
             second = participants[1]
             second.username = second.get_username()
-        
+
         if len(participants) >= 1:
             first = participants[0]
             first.username = first.get_username()
@@ -90,6 +87,6 @@ def certificate(request, event_id, participant_id):
     new.text((1000, 757), str(score.value), (0, 0, 0), font=font_small)
 
     certificate.save("static\certificates\Certificado.pdf", "PDF", resolution=180.0)
-    
+
 
     return FileResponse(open("static\certificates\Certificado.pdf", 'rb'), content_type='application/pdf')    
