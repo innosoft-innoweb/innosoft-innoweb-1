@@ -25,7 +25,7 @@ def home(request):
         user = request.user
 
 
-    scores = Score.objects.order_by('-value')
+    scores = Score.objects.order_by('-value').exclude(value=None)
 
     first = None
     second = None

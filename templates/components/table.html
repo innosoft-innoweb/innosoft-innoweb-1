@@ -18,7 +18,7 @@
             <td>{{e.name}}</td>
             <td>#{{e.position}}</td>
             <td>{{e.points}}</td>
-            <td><a href="{% url 'certificate' e.id p.id %}" target="_blank" class="btn btn-primary">Descargar</a></td>
+            <td class="participant-certificate"><a href="{% url 'certificate' e.id p.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
         </tr>
     {% endfor %}
     </tbody>
