@@ -1,5 +1,6 @@
 from django.http import FileResponse
 from django.shortcuts import render
+from participant.models import Participant
 from PIL import Image, ImageDraw, ImageFont
 from score.models import Score
 from django.contrib.auth import logout
@@ -14,7 +15,6 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-
     events = Event.objects.filter(status='Abierto')
 
     if request.GET.get('logout') == 'logout':
