@@ -2,17 +2,18 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/table.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-    <head>
-
+<head>
 
 <table class="tftable">
-    <tbody class = "body">
+    <thead>
         <tr>
             <th>{{ column1 }}</th>
             <th>{{ column2 }}</th>
             <th>Puntos</th>
             <th>Diploma</th>
         </tr>
+    </thead>
+    <tbody>
     {% for e in events %}
         <tr>
             <td>{{e.name}}</td>
