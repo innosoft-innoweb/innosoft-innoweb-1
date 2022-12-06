@@ -15,14 +15,10 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-<<<<<<< Updated upstream
-    events = Event.objects.filter(status='Abierto')
-=======
 
     future_events = Event.objects.filter(status='Abierto')
     current_events = Event.objects.filter(status='En proceso')
     past_events = Event.objects.filter(status='Finalizado')
->>>>>>> Stashed changes
 
     if request.GET.get('logout') == 'logout':
        logout(request)
