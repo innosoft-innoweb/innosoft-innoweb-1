@@ -55,28 +55,57 @@ class HomeViewTest(StaticLiveServerTestCase):
             podium_link = podium_item.find_element(By.CSS_SELECTOR, 'img')
             assert podium_link.get_attribute('src') == winner.photo
 
-    def test_events(self):
+    def test_open_events(self):
         self.browser.get(self.live_server_url)
 
-        event_cards = self.browser.find_elements(By.CSS_SELECTOR, 'a.event-card')
+        event_containers = self.browser.find_elements(By.CSS_SELECTOR, '.events-container')
+
+        open_events_cards = event_containers[0].find_elements(By.CSS_SELECTOR, 'a.event-card')
         open_events = Event.objects.filter(status="Abierto")
 
+        self.check_events_cards(self, open_events_cards, open_events)
+
+    def test_current_events(self):
+        self.browser.get(self.live_server_url)
+
+        event_containers = self.browser.find_elements(By.CSS_SELECTOR, '.events-container')
+
+        current_events_cards = event_containers[1].find_elements(By.CSS_SELECTOR, 'a.event-card')
+        current_events = Event.objects.filter(status="En proceso")
+
+        self.check_events_cards(self, current_events_cards, current_events)
+
+    def test_past_events(self):
+        self.browser.get(self.live_server_url)
+
+        event_containers = self.browser.find_elements(By.CSS_SELECTOR, '.events-container')
+
+        past_events_cards = event_containers[2].find_elements(By.CSS_SELECTOR, 'a.event-card')
+        past_events = Event.objects.filter(status="Finalizado")
+
+        self.check_events_cards(self, past_events_cards, past_events)
+
+    @classmethod
+    def check_events_cards(cls, self, events_cards, events):
         # check open events number
-        assert len(event_cards) == open_events.count()
+        assert len(events_cards) == events.count()
 
         # check if the events are the correct ones from db
-        for event_card, open_event in zip(event_cards, open_events.all()):
+        for event_card, open_event in zip(events_cards, events.all()):
+            self.check_event_card(self, event_card, open_event)
 
-            # check if card title is correct
-            card_title = event_card.find_element(By.CSS_SELECTOR, '.title-event')
-            assert card_title.text == open_event.name
+    @classmethod
+    def check_event_card(cls, self, event_card, event):
+        # check if card title is correct
+        card_title = event_card.find_element(By.CSS_SELECTOR, '.title-event')
+        assert card_title.text == event.name
 
-            # check if card link redirects to event
-            assert event_card.get_attribute('href') == self.live_server_url + '/evento/' + str(open_event.id)
+        # check if card link redirects to event
+        assert event_card.get_attribute('href') == self.live_server_url + '/evento/' + str(event.id)
 
-            # check if card img is correct
-            card_img = event_card.find_element(By.CSS_SELECTOR, '.event-image')
-            assert card_img.get_attribute('src') == open_event.photo
+        # check if card img is correct
+        card_img = event_card.find_element(By.CSS_SELECTOR, '.event-image')
+        assert card_img.get_attribute('src') == event.photo
 
     @classmethod
     def get_global_winners(cls):
