@@ -6,6 +6,7 @@ from score.models import Score
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
+
 class HomeViewTest(StaticLiveServerTestCase):
     fixtures = ['fixtures/initial.json']
 
@@ -206,5 +207,112 @@ class LoginViewTest(StaticLiveServerTestCase):
         assert len(self.browser.find_elements("id","error-form")) == 1
         
     
+class EventViewTest(StaticLiveServerTestCase):
+    fixtures = ['fixtures/initial.json']
+
+    @classmethod
+    def setUpClass(cls):
+        super(EventViewTest, cls).setUpClass()
+        options = webdriver.ChromeOptions()
+        options.headless = True
+        cls.browser = webdriver.Chrome(options=options)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.browser.quit()
+        super(EventViewTest, cls).tearDownClass()
+    
+    def test_register_event(self):
+        username = "tomcambor"
+        password = "Estaesmicontraseña"
+        PORT = self.live_server_url.split(":")[2]
+        self.browser.get(self.live_server_url)
+        self.browser.get("http://localhost:" + PORT + "/login")
+
+        self.browser.find_element("name", "username").send_keys(username)
         
+        self.browser.find_element("name","password").send_keys(password)
+        
+        self.browser.find_element("name", "submit").click()
+        
+        self.browser.get(self.live_server_url)
+        event_cards = self.browser.find_elements(By.CSS_SELECTOR, 'a.event-card')
+        first_event_ulr = event_cards[0].get_attribute('href')
+        self.browser.get(first_event_ulr)
+        register_button = self.browser.find_element(By.CSS_SELECTOR, 'a.sign-up')
+        register_button.click()
+        assert self.browser.find_element(By.CLASS_NAME,"alert-success").is_enabled() == True
+    
+    def test_register_event_already_registered(self):
+        username = "tomcambor"
+        password = "Estaesmicontraseña"
+        PORT = self.live_server_url.split(":")[2]
+        self.browser.get(self.live_server_url)
+        self.browser.get("http://localhost:" + PORT + "/login")
+      
+        self.browser.find_element("name", "username").send_keys(username)
+        
+        self.browser.find_element("name","password").send_keys(password)
+        
+        self.browser.find_element("name", "submit").click()
+        
+        self.browser.get(self.live_server_url)
+        event_cards = self.browser.find_elements(By.CSS_SELECTOR, 'a.event-card')
+        first_event_ulr = event_cards[0].get_attribute('href')
+        self.browser.get(first_event_ulr)
+        register_button = self.browser.find_element(By.CSS_SELECTOR, 'a.sign-up')
+        register_button.click()
+        self.browser.get(first_event_ulr)
+        register_button = self.browser.find_element(By.CSS_SELECTOR, 'a.sign-up')
+        register_button.click()
+        assert self.browser.find_element(By.CLASS_NAME,"alert-warning").is_enabled() == True
+
+
+    def test_register_event_without_login(self):
+        self.browser.get(self.live_server_url)
+        event_cards = self.browser.find_elements(By.CSS_SELECTOR, 'a.event-card')
+        first_event_ulr = event_cards[0].get_attribute('href')
+        self.browser.get(first_event_ulr)
+        register_button = self.browser.find_element(By.CSS_SELECTOR, 'a.sign-up')
+        register_button.click()
+        assert self.browser.find_element(By.CLASS_NAME,"alert-danger").is_enabled() == True
+
+class ProfileViewTest(StaticLiveServerTestCase):
+    fixtures = ['fixtures/initial.json']
+
+    @classmethod
+    def setUpClass(cls):
+        super(ProfileViewTest, cls).setUpClass()
+        options = webdriver.ChromeOptions()
+        options.headless = True
+        cls.browser = webdriver.Chrome(options=options)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.browser.quit()
+        super(ProfileViewTest, cls).tearDownClass()
+    
+    def test_next_events_are_shown(self):
+        username = "tomcambor"
+        password = "Estaesmicontraseña"
+        PORT = self.live_server_url.split(":")[2]
+        self.browser.get(self.live_server_url)
+        self.browser.get("http://localhost:" + PORT + "/login")
+
+        self.browser.find_element("name", "username").send_keys(username)
+        
+        self.browser.find_element("name","password").send_keys(password)
+        
+        self.browser.find_element("name", "submit").click()
+        
+        self.browser.get(self.live_server_url)
+        event_cards = self.browser.find_elements(By.CSS_SELECTOR, 'a.event-card')
+        first_event_ulr = event_cards[0].get_attribute('href')
+        self.browser.get(first_event_ulr)
+        register_button = self.browser.find_element(By.CSS_SELECTOR, 'a.sign-up')
+        register_button.click()
+        profile_url = self.browser.find_element(By.CSS_SELECTOR, 'a.navbar-link-primary').get_attribute('href')
+        self.browser.get(profile_url)
+        assert self.browser.find_element(By.CSS_SELECTOR, 'td.event-name').is_enabled() == True   
+
     
