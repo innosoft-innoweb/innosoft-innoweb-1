@@ -5,7 +5,9 @@ from event.models import Event
 from score.models import Score
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from decouple import config
 
+USER_PASSWORD = config('USER_PASSWORD')
 
 class HomeViewTest(StaticLiveServerTestCase):
     fixtures = ['fixtures/initial.json']
@@ -130,7 +132,7 @@ class LoginViewTest(StaticLiveServerTestCase):
     def test_login_success(self):
         
         username = "tomcambor"
-        password = "Estaesmicontraseña"
+        password = USER_PASSWORD
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -147,7 +149,7 @@ class LoginViewTest(StaticLiveServerTestCase):
         
     def test_login_username_fail(self):
         username = "incorrectusername"
-        password = "Estaesmicontraseña"
+        password = USER_PASSWORD
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -195,7 +197,7 @@ class EventViewTest(StaticLiveServerTestCase):
     
     def test_register_event(self):
         username = "tomcambor"
-        password = "Estaesmicontraseña"
+        password = USER_PASSWORD
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -216,7 +218,7 @@ class EventViewTest(StaticLiveServerTestCase):
     
     def test_register_event_already_registered(self):
         username = "tomcambor"
-        password = "Estaesmicontraseña"
+        password = USER_PASSWORD
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -265,7 +267,7 @@ class ProfileViewTest(StaticLiveServerTestCase):
     
     def test_next_events_are_shown(self):
         username = "tomcambor"
-        password = "Estaesmicontraseña"
+        password = USER_PASSWORD
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")

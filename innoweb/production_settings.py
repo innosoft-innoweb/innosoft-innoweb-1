@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from django.contrib.messages import constants as messages
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_$s8&xy9@woe3wlr(pqj3r(n8q78o4j##h-f4e%@3=ms_d$!i7'
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -86,8 +87,8 @@ DATABASES = {
     'default': {
         'ENGINE'  : 'django.db.backends.mysql',
         'NAME'    : 'innosoftinnoweb$innowebdb',
-        'USER'    : 'innosoftinnoweb',
-        'PASSWORD': 'Inn0$0ft_2k22',
+        'USER'    : config('PRODUCTION_DB_USER'),
+        'PASSWORD': config('PRODUCTION_DB_PASSWORD'),
         'HOST'    : 'innosoftinnoweb.mysql.pythonanywhere-services.com',
     }
 }

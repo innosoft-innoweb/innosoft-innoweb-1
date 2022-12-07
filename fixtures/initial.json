@@ -3,7 +3,7 @@
     "model": "participant.participant",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$390000$t2OIZxvgHmdsCv5I9Rejfi$h8Dw3EaSUSvIR2MluhS9kivGhtlODqon8DAsqnfqorA=",
+        "password": "pbkdf2_sha256$390000$ftGcH8BvhGg7hPqAvbgA74$lxvUK1T1WCy7GOLEH1cmfDdrwr/AiL/xAGEvGOI1IKs=",
         "last_login": "2022-11-19T21:55:55.973Z",
         "is_superuser": true,
         "username": "admin",
