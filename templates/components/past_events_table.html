@@ -16,7 +16,7 @@
     <tbody>
     {% for e in events %}
         <tr>
-            <td>{{e.name}}</td>
+            <td><a href="{% url 'event' e.id %}">{{e.name}}</a></td>
             <td>#{{e.position}}</td>
             <td>{{e.points}}</td>
             <td class="participant-certificate"><a href="{% url 'certificate' e.id p.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>

@@ -17,7 +17,7 @@
     {% for e in events %}
         <tr>
             <td>{{ forloop.counter }}</td>
-            <td class="event-name">{{ e.name }}</td>
+            <td class="event-name"><a href="{% url 'event' e.id %}">{{ e.name }}</a></td>
             <td class="event-date">{{ e.date }}</td>
             <td class="event-place">{{ e.place }}</td>
         </tr>
