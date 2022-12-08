@@ -13,7 +13,6 @@ env:
   DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
   PRODUCTION_DB_USER: ${{ secrets.PRODUCTION_DB_USER }}
   PRODUCTION_DB_PASSWORD: ${{ secrets.PRODUCTION_DB_PASSWORD }}
-  USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
 
 jobs:
   build:
