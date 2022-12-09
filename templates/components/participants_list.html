@@ -1,0 +1,13 @@
+<div class="participants-header">
+    <h2 class="title">Participantes</h2>
+    <div class="header-right">
+        <span class="status" id="status">{{ e.status }}</span>
+        {% if e.status == "Abierto" %}
+            <a class="sign-up" href="{% url 'join_event' e.id %}">Registrarse</a>
+        {% endif %}
+    </div>
+    
+</div>
+<hr class="line-break">
+
+{% include "components/participants_table.html" with scores=scores %}

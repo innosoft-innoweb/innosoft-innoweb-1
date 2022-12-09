@@ -29,6 +29,7 @@
     font-family: var(--ff-primary);
     font-weight: 400;
     color: var(--clr-dark-blue);
+    letter-spacing: -1px;
 }
 
 :is(p) {
@@ -48,6 +49,29 @@ body {
 
 h1 {
   font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+hr.line-break {
+  border: 1px solid var(--clr-dark-blue);
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  background-color: var(--clr-dark-blue);
+  width: 92%;
+}
+
+.title {
+  text-align: left;
+  margin-left: 5%;
 }
 
 /* MODERN HTML5 RESET https://piccalil.li/blog/a-modern-css-reset/ */

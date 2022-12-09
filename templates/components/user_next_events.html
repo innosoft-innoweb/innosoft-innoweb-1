@@ -1,0 +1,9 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
+</head>
+
+<h2 class="title">Próximos eventos</h2>
+<hr class="line-break">
+
+{% include "components/next_events_table.html" with column1='Evento' column2='Posición' elements=events p=participant %}

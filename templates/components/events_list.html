@@ -6,12 +6,18 @@
 </head>
 
 <body>
-    <h1 class="title-events">Eventos</h1>
-    <hr class="events-line">
+    <h1 class="title">
+        {{title}}
+    </h1>
+    <hr class="line-break">
 
     <div class="events-container">
-        {% for e in events %}
-        {% include "components/event.html" with event=e %}
-        {% endfor %}
+        {% if events %}
+            {% for e in events %}
+            {% include "components/event.html" with event=e %}
+            {% endfor %}
+        {% else %}
+            <h3 class="no-events-text">En este momento no hay {{title | lower}}</h3>
+        {% endif %}
     </div>
 </body>

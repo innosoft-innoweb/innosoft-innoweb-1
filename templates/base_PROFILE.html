@@ -24,28 +24,13 @@
     {% endif %}
 
     <div class="event-list-wrapper">
-        {% include "components/user_events.html" with events=u_events p=participant %}
-        <br><br><br>
-        
-        {% if my_profile and future_events|length > 0 %}
+        {% include "components/user_past_events.html" with events=u_events p=participant %}
+    </div>
     
-        <h2 class="title-events">Mis próximos eventos</h2>
-        <hr style="width: 75%; margin-left: 2%;">
-        <table class="tftable">
-            <tr>
-                <th>#</th>
-                <th>Evento</th>
-                <th>Fecha</th>
-                <th>Lugar</th>
-            </tr>
-            {% for fut_event in future_events %}
-            <tr>
-                <td>{{ forloop.counter }}</td>
-                <td class="event-name">{{ fut_event.name }}</td>
-                <td class="event-date">{{ fut_event.date }}</td>
-                <td class="event-place">{{ fut_event.place }}</td>
-            {% endfor %}
-        </table>
+    <div class="event-list-wrapper">
+        {% if my_profile and future_events|length > 0 %}
+
+        {% include "components/user_next_events.html" with events=future_events p=participant %}
         
         {% endif %}
     </div>

@@ -5,9 +5,7 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
-{% endblock %}
-
-        
+{% endblock %}     
 
 {% block content %}
 <div class="event-details">
@@ -19,7 +17,7 @@
             <div class="image-card">
                 <img class="event-image" src= {{ e.photo }} alt="Event image"/>    
             </div>
-        </div> 
+        </div>
 
         <div class="podium-wrapper-event">            
             {% include "components/podium.html"%}
@@ -42,37 +40,7 @@
     {% endif %}
 
     <div class="participants">
-        <div class="participants-header">
-            <h1>Participantes</h1>
-            <div class="header-right">
-                <span class="status" id="status">{{ e.status }}</span>
-                {% if e.status == "Abierto" %}
-                    <a class="sign-up" href="{% url 'join_event' e.id %}">Registrarse</a>
-                {% endif %}
-            </div>
-            
-        </div>
-        <hr class="line-break">
-        
-        <div class="participants-list">
-            <table class="tftable">
-                <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Puntuación</th>
-                    <th>Diploma</th>
-                </tr>
-                {% for s in scores %}
-                <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td class="participant-name">{{ s.participant.get_name }}</td>
-                    <td class="participant-surname">{{ s.participant.get_last_name }}</td>
-                    <td class="participant-score">{{ s.value }}</td>
-                    <td class="participant-certificate"><a href="{% url 'certificate' e.id s.participant.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
-                {% endfor %}
-            </table>
-        </div>
+        {% include "components/participants_list.html" with scores=scores %}
     </div>
 
 </div>

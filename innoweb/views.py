@@ -15,7 +15,10 @@ def index(request):
     return render(request, 'index.html')
 
 def home(request):
-    events = Event.objects.filter(status='Abierto')
+
+    future_events = Event.objects.filter(status='Abierto')
+    current_events = Event.objects.filter(status='En proceso')
+    past_events = Event.objects.filter(status='Finalizado')
 
     if request.GET.get('logout') == 'logout':
        logout(request)
@@ -56,10 +59,13 @@ def home(request):
             first.username = first.get_username()
 
     return render(request, 'base_HOME.html', 
-        {'events': events,
-        'first': first,
-        'second': second,
-        'third': third
+        {
+            'current_events': current_events,
+            'past_events': past_events,
+            'future_events': future_events,
+            'first': first,
+            'second': second,
+            'third': third
         })
 
 
