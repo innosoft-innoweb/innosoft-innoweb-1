@@ -1,0 +1,26 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/table.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+<head>
+
+<table class="tftable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Evento</th>
+            <th>Fecha</th>
+            <th>Lugar</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for e in events %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td class="event-name"><a href="{% url 'event' e.id %}">{{ e.name }}</a></td>
+            <td class="event-date">{{ e.date }}</td>
+            <td class="event-place">{{ e.place }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

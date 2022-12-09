@@ -2,20 +2,21 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/table.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
-    <head>
-
+<head>
 
 <table class="tftable">
-    <tbody class = "body">
+    <thead>
         <tr>
             <th>{{ column1 }}</th>
             <th>{{ column2 }}</th>
             <th>Puntos</th>
             <th>Diploma</th>
         </tr>
+    </thead>
+    <tbody>
     {% for e in events %}
         <tr>
-            <td>{{e.name}}</td>
+            <td><a href="{% url 'event' e.id %}">{{e.name}}</a></td>
             <td>#{{e.position}}</td>
             <td>{{e.points}}</td>
             <td class="participant-certificate"><a href="{% url 'certificate' e.id p.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>

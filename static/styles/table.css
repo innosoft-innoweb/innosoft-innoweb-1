@@ -1,11 +1,12 @@
-.tftable{
-    border-spacing:0;
-    width: 95%;
-    margin-left: 10px;
+table {
+    border-spacing: 0;
+    width: 85%;
+    margin-inline: auto;
 }
 
-@media(max-width: 650px) {
-    .tftable {
+@media(max-width: 750px) {
+
+    table {
         width: 90%;
         display: block;
         overflow-x: auto;
@@ -13,19 +14,29 @@
 
 }
 
-.tftable tr{
+/* table header */
+thead th {
+    border-bottom: 2px solid;
+}
+
+/* first row */
+tbody tr:first-child td {
+    padding-top: 1.5rem;
+}
+
+/* all rows */
+table tr {
     font-family: var(--ff-primary);
     color: var(--clr-dark-blue);
-} 
-
-.tftable th{
-    padding-bottom: 1%;
-    text-align: left;
-    border-bottom: 2px solid;
-    
 }
-  
-.tftable td{
-    padding-right: 6em;
-    padding-top:1em;
+
+/* all cells */
+th, td {
+    text-align: left;
+    padding-left: 1em;
+}
+
+td {
+    padding: 0.5em;
+    padding-left: 1em;
 }

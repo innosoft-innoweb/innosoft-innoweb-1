@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/table.css' %}">
+
+<table class="tftable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Puntuación</th>
+            <th>Diploma</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for s in scores %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td class="participant-name"><a href="{% url 'profile' s.participant.id %}">{{ s.participant.get_name }}</a></td>
+            <td class="participant-surname">{{ s.participant.get_last_name }}</td>
+            <td class="participant-score">{{ s.value }}</td>
+            <td class="participant-certificate"><a href="{% url 'certificate' e.id s.participant.id %}" target="_blank" class="download-certificate">Descargar</a> <i class="fa fa-file-pdf-o"></i></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

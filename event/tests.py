@@ -160,9 +160,8 @@ class EventDetailViewTest(StaticLiveServerTestCase):
         for event in events:
             scores = Score.objects.filter(event=event).order_by('-value')
             self.browser.get(self.live_server_url +'/evento/' + str(event.id))
-            rows = self.browser.find_elements(By.XPATH, '//table/tbody/tr') # the first row is the header of the table
-            self.assertEqual(len(rows)-1, len(scores))
-            
+            rows = self.browser.find_elements(By.XPATH, '//table/tbody/tr')
+            self.assertEqual(len(rows), len(scores))
 
     def test_participants_in_event(self):
         
@@ -172,7 +171,7 @@ class EventDetailViewTest(StaticLiveServerTestCase):
             self.browser.get(self.live_server_url +'/evento/' + str(event.id))
             rows = self.browser.find_elements(By.XPATH, '//table/tbody/tr') 
             for i in range(len(rows)-1):
-                TABLE_ROW = '//table/tbody/tr['+str(i+2)+']' # excluding the first row of the table
+                TABLE_ROW = '//table/tbody/tr['+str(i+1)+']'
                 position = self.browser.find_element(By.XPATH, TABLE_ROW +'/td[1]')
                 name = self.browser.find_element(By.XPATH, TABLE_ROW +'/td[2]')
 
