@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 from event.models import Event
 from score.models import Score
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 class HomeViewTest(StaticLiveServerTestCase):
@@ -156,8 +158,8 @@ class LoginViewTest(StaticLiveServerTestCase):
     
     def test_login_success(self):
         
-        username = "tomcambor"
-        password = "Estaesmicontraseña"
+        username = "userTest"
+        password = "Testpassword17"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -174,7 +176,7 @@ class LoginViewTest(StaticLiveServerTestCase):
         
     def test_login_username_fail(self):
         username = "incorrectusername"
-        password = "Estaesmicontraseña"
+        password = "Testpassword17"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -189,7 +191,7 @@ class LoginViewTest(StaticLiveServerTestCase):
         assert len(self.browser.find_elements("id","error-form")) == 1
         
     def test_login_password_fail(self):
-        username = "tomcambor"
+        username = "userTest"
         password = "incorrectpassword"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
@@ -315,8 +317,8 @@ class EventViewTest(StaticLiveServerTestCase):
         super(EventViewTest, cls).tearDownClass()
     
     def test_register_event(self):
-        username = "tomcambor"
-        password = "Estaesmicontraseña"
+        username = "userTest"
+        password = "Testpassword17"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -336,8 +338,8 @@ class EventViewTest(StaticLiveServerTestCase):
         assert self.browser.find_element(By.CLASS_NAME,"alert-success").is_enabled() == True
     
     def test_register_event_already_registered(self):
-        username = "tomcambor"
-        password = "Estaesmicontraseña"
+        username = "userTest"
+        password = "Testpassword17"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
@@ -385,8 +387,8 @@ class ProfileViewTest(StaticLiveServerTestCase):
         super(ProfileViewTest, cls).tearDownClass()
     
     def test_next_events_are_shown(self):
-        username = "tomcambor"
-        password = "Estaesmicontraseña"
+        username = "userTest"
+        password = "Testpassword17"
         PORT = self.live_server_url.split(":")[2]
         self.browser.get(self.live_server_url)
         self.browser.get("http://localhost:" + PORT + "/login")
