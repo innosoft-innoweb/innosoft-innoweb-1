@@ -1,8 +1,8 @@
 sudo apt update
-sudo apt upgrade –y
-sudo apt install -y git python3 python3-pip docker docker.io screen
-sudo apt install default-libmysqlclient-dev
-docker pull mysql:5.7
+sudo apt upgrade -y
+sudo apt install -y git python3 python3-dev python3-pip
+sudo apt install -y build-essential libssl-dev libmysqlclient-dev
+
 git clone https://github.com/innosoft-innoweb/innosoft-innoweb-1
 cd innosoft-innoweb-1
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt

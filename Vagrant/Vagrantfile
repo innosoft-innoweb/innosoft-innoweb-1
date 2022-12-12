@@ -26,19 +26,8 @@ Vagrant.configure("2") do |config|
   # NOTE: This will enable public access to the opened port
   config.vm.network "forwarded_port", guest: 8000, host: 8080
 
-  # Sync the project directory with the guest
-  config.vm.synced_folder "../templates", "/var/www/html"
-
   # Run the provisioning script to set up the VM
   config.vm.provision "shell", path: "provision.sh"
-
-  # Install Apache and PHP
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt-get install -y apache2 libapache2-mod-php
-  SHELL
-
-
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
