@@ -6,3 +6,5 @@ locust
 Pillow==9.3.0
 webdriver_manager
 python-decouple
+flake8==6.0.0
+pre-commit==2.20.0
