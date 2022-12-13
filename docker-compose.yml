@@ -14,7 +14,7 @@ services:
     - "3306:3307"
    
   web:
-    image: tomascb/innosoft-innoweb-1:latest
+    image: innosoftinnoweb/innosoft-innoweb-1:latest
     command: >
       sh -c "python manage.py makemigrations && 
              python manage.py migrate && 
