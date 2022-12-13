@@ -10,9 +10,9 @@ class Score(models.Model):
     event = models.ForeignKey(e.Event, on_delete=models.CASCADE)
     value = models.PositiveIntegerField(default=0, null=True, blank=True)
 
-    #unique constraint for participant and event
+    # unique constraint for participant and event
     class Meta:
-        unique_together = (('participant', 'event'),)  
+        unique_together = (("participant", "event"),)
 
     def __str__(self):
         return str(self.participant) + " - " + str(self.event) + " - " + str(self.value)

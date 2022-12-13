@@ -4,7 +4,7 @@
 
 <footer>
 ###################################################################################
-# Allowed <type> values: 
+# Allowed <type> values:
 #   feat (new feature)
 #   fix (bug fix)
 #   docs (changes to documentation)

@@ -2,11 +2,11 @@ name: Innosoft eventos GA
 
 on:
   push:
-    branches: 
+    branches:
       - main
       - feature/**
   pull_request:
-    branches: 
+    branches:
       - main
 
 env:
@@ -30,7 +30,7 @@ jobs:
         ports:
           - 3307:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-      
+
     steps:
     - uses: actions/checkout@v2
     - name: Verify and configure MySQL connection
@@ -49,13 +49,13 @@ jobs:
         pip install codacy-coverage
         sudo apt-get install chromium-browser chromium-chromedriver
     - name: Make Migrations and Migrate
-      run: | 
+      run: |
         python ./manage.py makemigrations
         python ./manage.py migrate
     - name: Run Tests
-      run: | 
-        coverage run --branch --source=. ./manage.py test  --keepdb 
-        coverage xml 
+      run: |
+        coverage run --branch --source=. ./manage.py test  --keepdb
+        coverage xml
     - name: Codacy Coverage Reporter
       uses: codacy/codacy-coverage-reporter-action@v1
       with:

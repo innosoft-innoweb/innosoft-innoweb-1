@@ -5,7 +5,7 @@
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles/event.css' %}">
-{% endblock %}     
+{% endblock %}
 
 {% block content %}
 <div class="event-details">
@@ -15,11 +15,11 @@
                 {{ e.name}}
             </h2>
             <div class="image-card">
-                <img class="event-image" src= {{ e.photo }} alt="Event image"/>    
+                <img class="event-image" src= {{ e.photo }} alt="Event image"/>
             </div>
         </div>
 
-        <div class="podium-wrapper-event">            
+        <div class="podium-wrapper-event">
             {% include "components/podium.html"%}
         </div>
     </div>
@@ -46,7 +46,7 @@
 </div>
 
 <script type="text/javascript" src="{% static 'scripts/utils.js' %}"></script>
-    
+
     {% endblock %}
 
 

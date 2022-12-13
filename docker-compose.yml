@@ -1,6 +1,6 @@
 version: "3"
 
-services: 
+services:
   db:
     image: mysql:8
     environment:
@@ -12,12 +12,12 @@ services:
        MYSQL_TCP_PORT: "3307"
     ports:
     - "3306:3307"
-   
+
   web:
     build: .
     command: >
-      sh -c "python manage.py makemigrations && 
-             python manage.py migrate && 
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
@@ -28,4 +28,4 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-          
+

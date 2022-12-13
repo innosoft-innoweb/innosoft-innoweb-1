@@ -3,14 +3,14 @@
     /* COLOR PALETTE */
     --clr-white: hsl(0, 0%, 97%);
     --clr-black: hsl(0, 0%, 5%);
-    
+
     /* Primary */
     --clr-light-blue: hsl(205, 51%, 66%);
     --clr-yellow: hsl(44, 100%, 46%);
     --clr-dark-blue: hsl(225, 41%, 21%);
     --clr-dark-grey: hsl(0, 0%, 27%);
     --clr-light-grey: hsl(0, 0%, 84%);
-    
+
     /* Secondary */
     --clr-magenta: hsl(295, 85%, 57%);
     --clr-red: hsl(0, 100%, 46%);
@@ -140,7 +140,7 @@ select {
   html:focus-within {
    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
