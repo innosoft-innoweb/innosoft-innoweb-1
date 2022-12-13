@@ -1,0 +1,47 @@
+name: Docker Deployment
+
+on:
+  workflow_run:
+    workflows: [INNOSOFT eventos Build] 
+    types: 
+      - completed
+    branches:
+      - main
+
+env:
+  DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+  PRODUCTION_DB_USER: ${{ secrets.PRODUCTION_DB_USER }}
+  PRODUCTION_DB_PASSWORD: ${{ secrets.PRODUCTION_DB_PASSWORD }}
+
+jobs:
+ deployment:
+ 
+    runs-on: ubuntu-20.04
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v2
+        with:
+          images: innosoftinnoweb/innosoft-innoweb-1
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          
