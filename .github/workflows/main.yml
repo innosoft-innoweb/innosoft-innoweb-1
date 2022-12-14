@@ -1,4 +1,4 @@
-name: Innosoft eventos GA
+name: INNOSOFT eventos Build
 
 on:
   push:
