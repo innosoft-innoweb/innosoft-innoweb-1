@@ -1,19 +1,5 @@
 /*Events list*/
 
-.title-events {
-    text-align: left;
-    margin-left: 5%;
-}
-
-.events-line {
-    color: var(--clr-dark-blue);
-    width: 75%;
-    text-align: left;
-    margin-left: 2%;
-    margin-bottom: 3rem;
-}
-
-
 .events-container {
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +14,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .image-card {
@@ -96,6 +83,10 @@
     border: 1px solid var(--clr-dark-blue);
 }
 
+.event-details ul {
+    list-style-type: none;
+}
+
 .event-details {
     display: flex;
     flex-direction: column;
@@ -105,7 +96,7 @@
 
 .event-header { 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     padding: 0 1rem ;
     gap: 4rem 4rem;
@@ -122,8 +113,6 @@
     text-align: left;
     padding: 50px
 }
-
-
 
 /* Participants */
 .participants h1 {
@@ -148,7 +137,6 @@
     min-width: 200px;
 }
 
-
 .status {
     border: 2px solid;
     border-radius: 5px;
@@ -158,49 +146,20 @@
 }
 
 .sign-up {
-    border: 1px solid #000000;
+    border: 1px solid var(--clr-dark-blue);
     border-radius: 5px;
     padding: 5px;
     font-family: var(--ff-primary);
     color: #ffffff;
     background-color: var(--clr-dark-blue-lighter);
+    text-decoration: none;
 }
 
-.line-break {
-    border: 1px solid var(--clr-dark-blue-darker);
-    border-radius: 5px;
-    padding: 2px;
-    background-color: var(--clr-dark-blue-darker);
-}
+.sign-up:hover {
+    background-color: var(--clr-yellow);
+    border: 1px solid var(--clr-yellow);
+    color: #000000;
 
-.participants-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 30px;
-}
-
-.tftable{
-    border-spacing:0;
-    
-}
-
-tr{
-    font-family: var(--ff-primary);
-    color: var(--clr-dark-blue);
-    text-align: center;
-} 
-th{
-    text-align: center;
-    border-bottom: 2px solid;
-    padding: 1% 30px;
-    
-}
-  
-td{
-    text-align: center;
-    padding-top:1em;
 }
   
 .download-certificate {
@@ -208,11 +167,11 @@ td{
     padding-right: 5px;
 }
 
+.download-certificate:hover {
+    text-decoration: underline;
+}
+
 @media(max-width: 720px) {
-    .participants-list {
-        padding: 0;
-        overflow-x: auto;
-    }
     
     .event-details {
         padding: 100px 20px;
@@ -224,4 +183,8 @@ td{
     .event-details {
         padding: 100px 0;
     }
+}
+
+.no-events-text {
+    color: var(--clr-light-blue);
 }

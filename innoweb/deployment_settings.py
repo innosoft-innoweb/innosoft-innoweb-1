@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from django.contrib.messages import constants as messages
 from decouple import config
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,13 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY', default="_Z~I/9Vb8l#+~PtD>;PJPgW?eh^+_x#xyZ3x~D%%I<0mo-&Jq-")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'innosoftinnoweb.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost',
 ]
 
 
@@ -85,11 +86,8 @@ WSGI_APPLICATION = 'innoweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'  : 'django.db.backends.mysql',
-        'NAME'    : 'innosoftinnoweb$innowebdb',
-        'USER'    : config('PRODUCTION_DB_USER'),
-        'PASSWORD': config('PRODUCTION_DB_PASSWORD'),
-        'HOST'    : 'innosoftinnoweb.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -133,8 +131,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
-# STATIC_ROOT = BASE_DIR / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -34,3 +34,12 @@
     cursor: pointer;
     border: none;
 }
+
+.download-certificate {
+    text-decoration: none;
+    padding-right: 5px;
+}
+
+.download-certificate:hover {
+    text-decoration: underline;
+}

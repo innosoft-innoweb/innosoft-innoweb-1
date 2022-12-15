@@ -18,7 +18,13 @@
         {% include "components/podium.html" %}
     </div>
     <div class="event-list-wrapper">
-        {% include "components/events_list.html" %}
+        {% include "components/events_list.html" with title="Próximos eventos" events=future_events%}
+    </div>
+    <div class="event-list-wrapper">
+        {% include "components/events_list.html" with title="Eventos en proceso" events=current_events%}
+    </div>
+    <div class="event-list-wrapper">
+        {% include "components/events_list.html" with title="Eventos pasados" events=past_events%}
     </div>
 </div>
 

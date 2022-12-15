@@ -1,4 +1,4 @@
-name: Innosoft eventos GA
+name: INNOSOFT eventos Build
 
 on:
   push:
@@ -8,6 +8,11 @@ on:
   pull_request:
     branches: 
       - main
+
+env:
+  DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+  PRODUCTION_DB_USER: ${{ secrets.PRODUCTION_DB_USER }}
+  PRODUCTION_DB_PASSWORD: ${{ secrets.PRODUCTION_DB_PASSWORD }}
 
 jobs:
   build:
@@ -42,6 +47,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install codacy-coverage
+        sudo apt-get install chromium-browser chromium-chromedriver
     - name: Make Migrations and Migrate
       run: | 
         python ./manage.py makemigrations
