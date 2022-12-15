@@ -10,6 +10,9 @@ media
 # Backup files # 
 *.bak 
 
+# Vagrant #
+/Vagrant/.vagrant
+
 # If you are using PyCharm # 
 # User-specific stuff
 .idea/**/workspace.xml
