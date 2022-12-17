@@ -3,11 +3,11 @@
 [![Code Quality Codacy Badge](https://app.codacy.com/project/badge/Grade/6c581ba57c024b42a96e0cdd285c87d3)](https://www.codacy.com/gh/innosoft-innoweb/innosoft-innoweb-1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=innosoft-innoweb/innosoft-innoweb-1&amp;utm_campaign=Badge_Grade)
 [![Coverage Codacy Badge](https://app.codacy.com/project/badge/Coverage/6c581ba57c024b42a96e0cdd285c87d3)](https://www.codacy.com/gh/innosoft-innoweb/innosoft-innoweb-1/dashboard?utm_source=github.com&utm_medium=referral&utm_content=innosoft-innoweb/innosoft-innoweb-1&utm_campaign=Badge_Coverage)
 
-# <img src="https://github.com/innosoft-innoweb/innosoft-innoweb-1/blob/main/static/images/innosoft_logo-nobg.png" width="27"> INNOSOFT eventos
+# <img src="https://github.com/innosoft-innoweb/innosoft-innoweb-1/blob/main/static/images/innosoft_logo-nobg.png" width="27"> Innosoft Innoweb
 
 Website developed to support university days events where participants can register in events and consult their punctuation in those.
 
-## Possible ways of using INNOSOFT eventos
+## Possible ways of using Innosoft Innoweb
 
  - [Local Installation](#local-installation) :computer:
  - [Docker Local Deployment](#docker-local-deployment) :whale:
