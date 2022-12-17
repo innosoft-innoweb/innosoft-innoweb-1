@@ -94,7 +94,7 @@
     padding: 100px 50px;
 }
 
-.event-header { 
+.event-header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -161,7 +161,7 @@
     color: #000000;
 
 }
-  
+
 .download-certificate {
     text-decoration: none;
     padding-right: 5px;
@@ -172,7 +172,7 @@
 }
 
 @media(max-width: 720px) {
-    
+
     .event-details {
         padding: 100px 20px;
     }

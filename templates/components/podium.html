@@ -7,10 +7,10 @@
     <div class="podium-winner-wrapper">
       {% url 'profile' second.id as second_url %}
       {% if second_url %}
-      <a href="{{ second_url }}"> 
+      <a href="{{ second_url }}">
         <img class="podium-photo" src="{{ second.photo }}"/>
-      {% else %} 
-      <a> 
+      {% else %}
+      <a>
       {% endif %}
       </a>
       <p class="podium-winner">{{ second.username }}</p>
@@ -21,7 +21,7 @@
     <div class="podium-winner-wrapper">
       {% url 'profile' first.id as first_url %}
       {% if first_url %}
-      <a href="{{ first_url }}"> 
+      <a href="{{ first_url }}">
         <img class="podium-photo" src="{{ first.photo }}"/>
       {% else %}
       <a>

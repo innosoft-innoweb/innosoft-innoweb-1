@@ -31,12 +31,12 @@
     font-size: 1rem;
     color: var(--clr-dark-blue);
     margin-bottom: 5px;
-    
+
 }
 
 h4{
     text-align: center;
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
 }
 
 a{
@@ -102,7 +102,7 @@ label{
         position: fixed;
         top: 45%;
         left: 50%;
-       
+
     }
 
     html{
@@ -110,8 +110,8 @@ label{
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-        
-    
-    
+
+
+
     }
 }

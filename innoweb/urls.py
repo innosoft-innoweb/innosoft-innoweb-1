@@ -21,12 +21,16 @@ from django.urls import include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('registro/', include('accounts.urls')),
-    path('', home, name='home'),
-    path('evento/', include('event.urls')),
-    path('', include('django.contrib.auth.urls')),
-    path('participante/', include('participant.urls')),
-    path('puntuacion/', include('score.urls')),
-    path('certificate/<int:event_id>/<int:participant_id>', certificate, name='certificate'),
+    path("admin/", admin.site.urls),
+    path("registro/", include("accounts.urls")),
+    path("", home, name="home"),
+    path("evento/", include("event.urls")),
+    path("", include("django.contrib.auth.urls")),
+    path("participante/", include("participant.urls")),
+    path("puntuacion/", include("score.urls")),
+    path(
+        "certificate/<int:event_id>/<int:participant_id>",
+        certificate,
+        name="certificate",
+    ),
 ]

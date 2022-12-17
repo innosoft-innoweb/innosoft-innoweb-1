@@ -42,7 +42,7 @@
     height: 40px;
 }
 
-/* MESSAGES STYLES FROM BOOTSTRAP <-- I added these lines because if I added the whole bootstrap library, 
+/* MESSAGES STYLES FROM BOOTSTRAP <-- I added these lines because if I added the whole bootstrap library,
 the whole style of the page would change to something completely different. Besides, this is the only thing
 we really need so we can show the messages right.*/
 
