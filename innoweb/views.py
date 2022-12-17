@@ -84,8 +84,8 @@ def certificate(request, event_id, participant_id):
 
     new = ImageDraw.Draw(certificate)
 
-    font = ImageFont.truetype(r"static/fonts/BRUSHSCI.ttf", 90)
-    font_small = ImageFont.truetype(r"static/fonts/BRUSHSCI.ttf", 50)
+    font = ImageFont.truetype(r"static/fonts/BRUSHSCI.TTF", 90)
+    font_small = ImageFont.truetype(r"static/fonts/BRUSHSCI.TTF", 50)
     new.text((498, 518), participant.get_complete_name(), (0, 0, 0), font=font)
     new.text((757, 620), e.name, (0, 0, 0), font=font_small)
     new.text(
