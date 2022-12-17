@@ -1,0 +1,17 @@
+[flake8]
+max-line-length = 88
+select = C,E,F,W,B,B950
+extend-ignore =
+    E302,
+    E203,
+    E501,
+    F403, ; Import * used
+    F405, ; X may be undefined, or defined from * imports
+exclude =
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    old,
+    build,
+    dist,
+    */migrations/*,
