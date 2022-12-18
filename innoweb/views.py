@@ -97,6 +97,6 @@ def certificate(request, event_id, participant_id):
     certificate.save("static/certificates/Certificado.pdf", "PDF", resolution=180.0)
 
     return FileResponse(
-        open("static\certificates\Certificado.pdf", "rb"),
+        open("static/certificates/Certificado.pdf", "rb"),
         content_type="application/pdf",
     )
