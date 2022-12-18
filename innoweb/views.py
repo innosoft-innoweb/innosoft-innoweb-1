@@ -77,7 +77,7 @@ def certificate(request, event_id, participant_id):
 
     score = Score.objects.get(event=e, participant=participant)
 
-    certificate = Image.open("static\images\Sample_certificate.png")
+    certificate = Image.open("static/images/Sample_certificate.png")
 
     certificate.load()
     certificate = certificate.convert("RGB")
